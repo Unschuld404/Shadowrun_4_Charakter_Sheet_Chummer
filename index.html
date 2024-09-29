@@ -1,12 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Kaya</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <span>Kaya</span>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <div class="character">
+            <img src="./assets/Kaya_Profilbild.png" alt="Kaya" class="char-img">
+            <div>
+                <p class="bold">5.600 N¥</p>
+                <p>4 Karma</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#chummer">
+                    <i class='bx bxs-user'></i>
+                    <span class="nav-item">Chummer</span>
+                </a>
+                <span class="tooltip">Chummer</span>
+            </li>
+            <li>
+                <a href="#attributes">
+                    <i class='bx bx-dna'></i>
+                    <span class="nav-item">Attribute</span>
+                </a>
+                <span class="tooltip">Attribute</span>
+            </li>
+            <li>
+                <a href="#skills">
+                    <i class='bx bxs-joystick'></i>
+                    <span class="nav-item">Fähigkeiten</span>
+                </a>
+                <span class="tooltip">Fähigkeiten</span>
+            </li>
+            <li>
+                <a href="#spells">
+                    <i class='bx bxs-magic-wand'></i>
+                    <span class="nav-item">Zauber</span>
+                </a>
+                <span class="tooltip">Zauber</span>
+            </li>
+            <li>
+                <a href="#spirits">
+                    <i class='bx bxs-ghost'></i>
+                    <span class="nav-item">Geister</span>
+                </a>
+                <span class="tooltip">Geister</span>
+            </li>
+            <li>
+                <a href="#condition">
+                    <i class='bx bxs-heart' ></i>
+                    <span class="nav-item">Zustand</span>
+                </a>
+                <span class="tooltip">Zustand</span>
+            </li>
+            <li>
+                <a href="#help">
+                    <i class='bx bxs-help-circle' ></i>
+                    <span class="nav-item">Spielhilfe</span>
+                </a>
+                <span class="tooltip">Spielhilfe</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <section id="chummer">
+                <h1>Chummer</h1>
+                <div class="flex-container">
+                    <img src="./assets/Kaya_Portrait.png" alt="Kaya's Portrait" class="flex-item">
+                    <div class="flex-item">
+                        <ul>
+                            <li><span class="top-category">Gesellschaftlich</span><span class="property"></span></li>
+                            <li><span class="category">Straßenruf:</span><span class="property">0</span></li>
+                            <li><span class="category">Schlechtes Ansehen:</span><span class="property">0</span></li>
+                            <li><span class="category">Öffentliches Ansehen:</span><span class="property">1</span></li>
+                        </ul>
+                    </div>
+                    <div class="flex-item">
+                        <ul>
+                            <li><span class="top-category">Kognitiv</span><span class="property"></span></li>
+                            <li><span class="category">Selbstbeherrschung:</span><span class="property">11</span></li>
+                            <li><span class="category">Absichten einschätzen:</span><span class="property">9</span></li>
+                            <li><span class="category">Erinnerung:</span><span class="property">9</span></li>
+                        </ul>
+                    </div>
+                    <div class="flex-item">
+                        <ul>
+                            <li><span class="top-category">Körper</span><span class="property"></span></li>
+                            <li><span class="category">Metatyp:</span><span class="property">Zwerg</span></li>
+                            <li><span class="category">Geschwindigkeit:</span><span class="property">8/20</span></li>
+                            <li><span class="category">Heben/Tragen:</span><span class="property">7</span></li>
+                            <li><span class="category">Traglast:</span><span class="property">45kg / 30kg</span></li>
+                            <li><span class="category">Alter:</span><span class="property">17</span></li>
+                            <li><span class="category">Geschlecht:</span><span class="property">weiblich</span></li>
+                            <li><span class="category">Gewicht:</span><span class="property">75 kg</span></li>
+                            <li><span class="category">Größe:</span><span class="property">1,50 m</span></li>
+                            <li><span class="category">Haare:</span><span class="property">schwarz</span></li>
+                            <li><span class="category">Augen:</span><span class="property">grün</span></li>
+                            <li><span class="category">Haut:</span><span class="property">toffee</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="attributes">
+                <h1>Attribute</h1>
+                <div class="attribute-grid-container">
+                    <div class="attribute-grid-item-1">Körperlich</div>
+                    <div class="attribute-grid-item-2">4</div>
+                    <div class="attribute-grid-item-3">1</div>
+                    <div class="attribute-grid-item-4">3</div>
+                    <div class="attribute-grid-item-5">3</div>
+                    <div class="attribute-grid-item-6">Körper</div>
+                    <div class="attribute-grid-item-7">Agilität</div>
+                    <div class="attribute-grid-item-8">Reaktion</div>
+                    <div class="attribute-grid-item-9">Stärke</div>
+                </div>
+                <div class="attribute-grid-container">
+                    <div class="attribute-grid-item-1">Geistig</div>
+                    <div class="attribute-grid-item-2">5</div>
+                    <div class="attribute-grid-item-3">4</div>
+                    <div class="attribute-grid-item-4">3</div>
+                    <div class="attribute-grid-item-5">6</div>
+                    <div class="attribute-grid-item-6">Charisma</div>
+                    <div class="attribute-grid-item-7">Intuition</div>
+                    <div class="attribute-grid-item-8">Logik</div>
+                    <div class="attribute-grid-item-9">Wille</div>
+                </div>
+                <div class="attribute-grid-container">
+                    <div class="attribute-grid-item-1">Spezial 1</div>
+                    <div class="attribute-grid-item-2">3</div>
+                    <div class="attribute-grid-item-3">6</div>
+                    <div class="attribute-grid-item-4">7</div>
+                    <div class="attribute-grid-item-5">5</div>
+                    <div class="attribute-grid-item-6">Edge</div>
+                    <div class="attribute-grid-item-7">Essenz</div>
+                    <div class="attribute-grid-item-8">Initiative</div>
+                    <div class="attribute-grid-item-9">Magie</div>
+                </div>
+                <div class="attribute-grid-container">
+                    <div class="attribute-grid-item-1">Spezial 2</div>
+                    <div class="attribute-grid-item-2">8</div>
+                    <div class="attribute-grid-item-3">6</div>
+                    <div class="attribute-grid-item-4">1 / 1</div>
+                    <div class="attribute-grid-item-5">3</div>
+                    <div class="attribute-grid-item-6">Astral Ini</div>
+                    <div class="attribute-grid-item-7">Matrix Ini</div>
+                    <div class="attribute-grid-item-8">Akt. (I/M)</div>
+                    <div class="attribute-grid-item-9">Akt. (A)</div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h1>Fähigkeiten</h1>
+            </section>
+
+            <section id="spells">
+                <h1>Zauber</h1>
+            </section>
+
+            <section id="spirits">
+                <h1>Geister</h1>
+            </section>
+
+            <section id="condition">
+                <h1>Zustand</h1>
+            </section>
+
+            <section id="help">
+                <h1>Spielhilfe</h1>
+            </section>
+
+        </div>
+    </div>
+
 </body>
+<script>
+    let btn = document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
 </html>
