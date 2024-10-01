@@ -1,2 +1,1 @@
-# Shadowrun_4_Charakter_Sheet_Chummer
-Lernprojekt
+# CharakterSheetSR4
