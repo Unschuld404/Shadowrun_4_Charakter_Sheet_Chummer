@@ -15,7 +15,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 80px;
+    font-size: 50px;
     color: white;
 }
 
@@ -120,7 +120,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 30px;
+    font-size: 20px;
     font-weight: normal;
 }
 
@@ -129,7 +129,7 @@ body {
     text-align: center;
     padding-top: 0.5rem;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .actions {
@@ -150,9 +150,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     margin-top: 2%;
-    font-size: 40px;
+    font-size: 30px;
     border-bottom: var(--secondary-color) 5px dotted;
     width: 80%;
 }
@@ -170,18 +170,18 @@ body {
 }
 
 .skill-value {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .skill-pool {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .skill i {
     align-items: right;
     margin-right: 2%;
-    font-size:50px;;
+    font-size:30px;;
 }
 
 i:hover, i:active {
