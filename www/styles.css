@@ -35,7 +35,7 @@ body {
     grid-template-rows: repeat(15, 1fr);
     grid-template-columns: repeat(20, 1fr);
     height: 100vh;
-    gap: 40px;
+    gap: 20px;
 }
 
 .header {
@@ -120,14 +120,14 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 20px;
+    font-size: 15px;
     font-weight: normal;
 }
 
 .nuyen p, .armor p, .edge p, .initiative p {
     color :var(--font-color);
     text-align: center;
-    padding-top: 0.5rem;
+    padding-top: 0.2rem;
     font-weight: bold;
     font-size: 40px;
 }
@@ -135,14 +135,14 @@ body {
 .actions {
     display: flex;
     flex-direction: column;
-    margin-top: 2%;
+    margin-top: 1%;
     align-items: center;;
 }
 
 .skills {
     display: flex;
     flex-direction: column;
-    margin-top: 3%;
+    margin-top: 2%;
     align-items: center;;
 }
 
@@ -150,9 +150,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 3%;
-    margin-top: 2%;
-    font-size: 30px;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-size: 25px;
     border-bottom: var(--secondary-color) 5px dotted;
     width: 80%;
 }
