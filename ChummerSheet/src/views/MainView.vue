@@ -1,7 +1,43 @@
 <script setup lang="ts">
+
+    import { ref } from 'vue';
+
+    const edge = ref(3);
+
+    function add():void
+    {
+        edge.value = edge.value + 1;
+    }
+
+    const showModal = ref(false);
+
+    function openModal() 
+    {
+        showModal.value = true;
+    }
+
+    function closeModal() 
+    {
+        showModal.value = false;
+    }
+
+    async function ladeDaten(): Promise<void> 
+    {
+        const response = await fetch('https://api.blackserver.de/chummer/roll');
+        edge.value = Number(await response.text());
+    }
+
 </script>
 
 <template>
+
+    <div v-if="showModal" class="modal-overlay">
+        <div class="modal-content">
+        <!-- Deine zusätzlichen Elemente hier -->
+        <p>Inhalt des Modals</p>
+        <button @click="closeModal">Schließen</button>
+        </div>
+    </div>
 
     <div class="nuyen box">
 
@@ -13,7 +49,7 @@
 
     <div class="edge box">
 
-    <div class="edge-dice">3</div>
+    <div class="edge-dice" @click="add">{{ edge }}</div>
     <div class="box-name">Edge</div>
 
     </div>
@@ -25,14 +61,14 @@
         <div class="initiative">
 
             <div class="initiative-category">Normal</div>
-            <button class="pool">7</button>
+            <button class="pool"  @click="openModal">7</button>
         
         </div>
 
         <div class="initiative">
 
             <div class="initiative-category">Matrix</div>
-            <button class="pool">6</button>
+            <button class="pool" @click="ladeDaten">6</button>
 
         </div>
 
@@ -387,7 +423,7 @@
     /* Content-Styling */
 
     .header {
-        font-size: 3vh;
+        font-size: 4vh;
     }
 
     .name {
@@ -426,6 +462,7 @@
         text-align: center;
         font-weight: bold; 
         font-size: 2.5vh;
+        color: var(--accent-color);
     }
 
     .pool {
@@ -438,7 +475,8 @@
         width: 4vh;
         font-size: 2.5vh;
         margin-top: 0.5vh;
-        color: var(--primary-color);
+        color: var(--accent-color);
+        background-color: var(--secondary-color)
     }
 
     .initiative, .resistance {
@@ -480,10 +518,14 @@
         width: 50%;
     }
 
-    .action-numbers, .skill-numbers {
+    .skill-numbers {
         display: flex;
         flex-direction: row;
         gap: 5vw;
+    }
+
+    .drain-formula {
+        font-weight: bold;
     }
 
     .body-dmg, .stun-dmg {
@@ -603,6 +645,29 @@
         grid-row-end: 15;
         grid-column-start: 16;
         grid-column-end: 20;
+    }
+
+    /* Modal */
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 500px;
+        width: 100%;
     }
 
 </style>

@@ -1,9 +1,9 @@
 :root {
-  --background-color: #010813;
-  --primary-color: #0B192C;
-  --secondary-color: #11253b;
-  --accent-color: #FF6500;
-  --font-color: #ffffff;
+  --background-color: #070f07  ;
+  --secondary-color: #0d200d  ;
+  --primary-color: #183318  ;
+  --accent-color: #f39b43  ;
+  --font-color: #b6f5b6  ;
 }
 
 * {
@@ -16,6 +16,7 @@
 html {
   scroll-behavior: smooth;
   color: var(--font-color);
+  text-transform: uppercase;
 }
 
 body {
