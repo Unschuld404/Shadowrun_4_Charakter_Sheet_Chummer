@@ -205,20 +205,15 @@ body {
 /* Klicki Bunti */
 
 button:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
     cursor: pointer;
 }
 
 .nuyen-amount:hover, .edge-dice:hover {
-    color: var(--accent-color);
     cursor: pointer;
 }
 
 .drain-formula:hover {
-    color: var(--accent-color);
     cursor: pointer;
-    font-weight: bold;
 }
 
 .body-dmg, .stun-dmg {
@@ -235,10 +230,6 @@ button:hover {
     border-radius: 1vh;
     background-color: var(--secondary-color);
     cursor: pointer;
-}
-
-.dmg:hover {
-    background-color: var(--accent-color);
 }
 
 .dmg:checked {
