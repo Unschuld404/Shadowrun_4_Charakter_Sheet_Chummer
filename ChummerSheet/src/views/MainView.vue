@@ -438,6 +438,7 @@
         width: 4vh;
         font-size: 2.5vh;
         margin-top: 0.5vh;
+        color: var(--primary-color);
     }
 
     .initiative, .resistance {
