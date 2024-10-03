@@ -1,9 +1,9 @@
 :root {
-    --background-color: #01080e;
-    --primary-color: #082032;
-    --secondary-color: #334756;
-    --accent-color: #FF4C29;
-    --font-color: #e7ecf0;
+    --background-color: #010813;
+    --primary-color: #0B192C;
+    --secondary-color: #11253b;
+    --accent-color: #FF6500;
+    --font-color: #ffffff;
 }
 
 * {
@@ -45,7 +45,7 @@ body {
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 21;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,24 +57,24 @@ body {
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 4;
 }
 
-.armor {
+.initiative {
     grid-row-start: 2;
     grid-row-end: 4;
-    grid-column-start: 5;
-    grid-column-end: 8;
+    grid-column-start: 4;
+    grid-column-end: 9;
 }
 
 .edge {
     grid-row-start: 2;
     grid-row-end: 4;
-    grid-column-start: 8;
+    grid-column-start: 9;
     grid-column-end: 10;
 }
 
-.initiative {
+.resistance {
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 10;
@@ -99,39 +99,51 @@ body {
     grid-row-start: 9;
     grid-row-end: 15;
     grid-column-start: 10;
-    grid-column-end: 15;
+    grid-column-end: 13;
 }
 
 .mental-condition {
     grid-row-start: 9;
     grid-row-end: 15;
-    grid-column-start: 15;
-    grid-column-end: 20;
+    grid-column-start: 13;
+    grid-column-end: 16;
 }
 
 /* Box-Styling */
 
 .box {
     background-color: var(--primary-color);
-    position: relative;
     border-radius: 1vh;
+    position: relative;
 }
 
-.box h1 {
+.box-name {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: calc(100% - 10px);
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
     font-size: 2vh;
-    font-weight: normal;
 }
 
-.nuyen p, .armor p, .edge p, .initiative p {
+.nuyen-amount {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5vh;
+    font-weight: bold; 
+    font-size: 3vh;
+}
+
+.edge-dice {
     color :var(--font-color);
     text-align: center;
     padding-top: 0.2rem;
     font-weight: bold;
     font-size: 4vh;
+    margin-top: 3.5vh;
 }
 
 .actions, .skills {
@@ -140,39 +152,95 @@ body {
     margin-top: 2vh;
 }
 
-.skill {
+.skill, .action {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
+    margin-bottom: 1.5vh;
     margin-left: 2vw;
     margin-right: 2vw;
     font-size: 3vh;
     border-bottom: var(--secondary-color) 0.2vh solid;
 }
 
-.skill-name {
+.skill-name, .action-name {
     text-align: left;
     margin-left: 1vw;
     width: 50%;
 }
 
-.skill-numbers {
+.skill-numbers, .action-numbers {
     display: flex;
     flex-direction: row;
-    gap: 20%;
+    gap: 5vw;
 }
 
-.skill-pool {
+.skill-value {
+    font-size: 2.5vh;
+}
+
+.pool {
+    font-weight: bold;
+    margin-right: 1vw;
+    border: none;
+    margin: 0;
+    font-size: 3vh;
+    height: 4vh;
+    width: 3vw;
+    text-align: center;
+    border-radius: 0.5vh;
+}
+
+.initiatives, .resistances {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.initiative-category, .resistance-category {
+    padding-top: 1.5vh;
+    padding-bottom: 0.3vh;
+}
+
+/* Klicki Bunti */
+
+button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.nuyen-amount:hover, .edge-dice:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.drain-formula:hover {
+    color: var(--accent-color);
+    cursor: pointer;
     font-weight: bold;
 }
 
-.skill i {
-    align-items: right;
-    margin-right: 1vw;
+.body-dmg, .stun-dmg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
 }
 
-i:hover, i:active {
-    color: var(--accent-color);
+.dmg {
+    appearance: none;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 1vh;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.dmg:hover {
+    background-color: var(--accent-color);
+}
+
+.dmg:checked {
+    background-color: var(--accent-color);
 }

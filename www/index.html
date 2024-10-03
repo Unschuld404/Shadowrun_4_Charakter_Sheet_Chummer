@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CharacterSheetSR4</title>
+    <link rel="icon" type="image/x-icon" href="./assets/SR_favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,173 +12,408 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+
     <div class="container">
+
         <header class="header">
-            <div class="name">Name</div>
-            <div class="karma">500 Karma</div>
+
+            <div class="name">Kaya</div>
+            <div class="karma">Radikale Ökoschamanin</div>
+
         </header>
+
         <div class="nuyen box">
-            <p>500.000</p>
-            <h1>Nuyen</h1>
-        </div>
-        <div class="armor box">
-            <p>3</p>
-            <h1>Rüstung</h1>
-        </div>
+
+            <div class="nuyen-amount">5.600 ¥</div>
+
+            <div class="box-name">Nuyen</div>
+
+        </div>  
+
         <div class="edge box">
-            <p>3</p>
-            <h1>Edge</h1>
+
+            <div class="edge-dice">3</div>
+            <div class="box-name">Edge</div>
+
         </div>
+
         <div class="initiative box">
-            <p>7</p>
-            <h1>Initiative</h1>
+
+            <div class="initiatives">
+  
+                <div class="initiative">
+
+                    <div class="initiative-category">Normal</div>
+                    <button class="pool">7</button>
+                   
+                </div>
+
+                <div class="initiative">
+
+                    <div class="initiative-category">Matrix</div>
+                    <button class="pool">6</button>
+    
+                </div>
+
+                <div class="initiative">
+
+                    <div class="initiative-category">Astral</div>
+                    <button class="pool">8</button>
+    
+                </div>
+
+            </div>
+
+            <div class="box-name">Initiative</div>
+
         </div>
+
+        <div class="resistance box">
+
+            <div class="resistances">
+
+                <div class="resistance">
+
+                    <div class="resistance-category">Ballistisch</div>
+                    <button class="pool">8</button>
+
+                </div>
+
+                <div class="resistance">
+
+                    <div class="resistance-category">Stoß</div>
+                    <button class="pool">6</button>
+
+                </div>
+
+                <div class="resistance">
+
+                    <div class="resistance-category">Körperlich</div>
+                    <button class="pool">4</button>
+
+                </div>
+
+                <div class="resistance">
+
+                    <div class="resistance-category">Willenskraft</div>
+                    <button class="pool">6</button>
+
+                </div>
+
+                <div class="resistance">
+
+                    <div class="resistance-category">Entzug</div>
+                    <button class="pool">11</button>
+
+                </div>
+
+            </div>
+
+            <div class="box-name">Widerstand</div>
+
+        </div>  
+
         <div class="fav-skills box">
+
             <div class="skills">
 
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 1</div>
+
+                    <div class="skill-name">Assensing</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">4 + INT 4</div>
+                        <button class="pool">8</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
+
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 2</div>
+
+                    <div class="skill-name">Ausweichen</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">1 + REA 3</div>
+                        <button class="pool">4</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
+
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 3</div>
+
+                    <div class="skill-name">Bannen</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">4 + MAG 5</div>
+                        <button class="pool">9</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
+
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 4</div>
+
+                    <div class="skill-name">Binden</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">4 + MAG 5</div>
+                        <button class="pool">9</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
+
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 5</div>
+
+                    <div class="skill-name">Beschwören</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">4 + MAG 5</div>
+                        <button class="pool">9</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
+
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 6</div>
+
+                    <div class="skill-name">Etikette</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">1 + CHA 5</div>
+                        <button class="pool">6</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
                 </div>
-                
+
+
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 7</div>
+
+                    <div class="skill-name">Gegenzauber</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">4 + MAG 5</div>
+                        <button class="pool">9</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
+
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 8</div>
+
+                    <div class="skill-name">Heimlichkeit</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">1 + INT 4</div>
+                        <button class="pool">4</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
+
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 9</div>
+
+                    <div class="skill-name">Wahrnehmung</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">2 + INT 4</div>
+                        <button class="pool">6</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
+
                 <div class="skill">
-                    <div class="skill-name">Fertigkeit 10</div>
+
+                    <div class="skill-name">Zaubern</div>
                     <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                        <div class="skill-value">4 + MAG 5</div>
+                        <button class="pool">9</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
 
             </div>
-            <h1>Fertigkeiten</h1>
+
+            <div class="box-name">Fertigkeiten</div>
+
         </div>
+
         <div class="fav-actions box">
+
             <div class="actions">
 
-                <div class="skill">
-                    <div class="skill-name">Aktion 1</div>
-                    <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+                <div class="action">
+                    <div class="action-name">Powerblitz</div>
+                    <div class="action-numbers">
+
+                        <div class="drain-formula">(F÷2)+1</div>
+                        <button class="pool">11</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
-                <div class="skill">
-                    <div class="skill-name">Etikette (Straße)</div>
-                    <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                <div class="action">
+
+                    <div class="action-name">Betäubungsblitz</div>
+                    <div class="action-numbers">
+
+                        <div class="drain-formula">(F÷2)-1</div>
+                        <button class="pool">11</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
-                <div class="skill">
-                    <div class="skill-name">Aktion 3</div>
-                    <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                <div class="action">
+
+                    <div class="action-name">Verbesserte Unsichtbarkeit</div>
+                    <div class="action-numbers">
+
+                        <div class="drain-formula">(F÷2)+1</div>
+                        <button class="pool">11</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
                 </div>
-                
-                <div class="skill">
-                    <div class="skill-name">Aktion 4</div>
-                    <div class="skill-numbers">
-                        <div class="skill-value">(5)</div>
-                        <div class="skill-pool">10</div>
+
+                <div class="action">
+
+                    <div class="action-name">Levitieren</div>
+                    <div class="action-numbers">
+
+                        <div class="drain-formula">(F÷2)-1</div>
+                        <button class="pool">11</button>
+
                     </div>
-                    <i class='bx bxs-dice-6'></i>
+
+                </div>
+
+                <div class="action">
+
+                    <div class="action-name">Formwandeln</div>
+                    <div class="action-numbers">
+
+                        <div class="drain-formula">(F÷2)+2</div>
+                        <button class="pool">11</button>
+
+                    </div>
+                    
                 </div>
 
             </div>
-            <h1>Aktionen</h1>
+
+            <div class="box-name">Specials</div>
+
         </div>
+
         <div class="body-condition box">
-            <p></p>
-            <h1>Körperlicher Zustand</h1>
+
+            <div class="body-dmg">
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+               
+
+            </div>
+
+            <div class="box-name">Körperlicher Zustand</div>
+
         </div>
+
         <div class="mental-condition box">
-            <p></p>
-            <h1>Geistiger Zustand</h1>
+
+            <div class="stun-dmg">
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+                <div class="row">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+            </div>
+
+            <div class="box-name">Geistiger Zustand</div>
+
         </div>
+
     </div>
+
 </body>
 </html>
