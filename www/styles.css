@@ -22,12 +22,108 @@ body {
     background-color: var(--background-color);
 }
 
+button:hover, .nuyen-amount, .edge-dice, .drain-formula, .dmg  {
+    cursor: pointer;
+}
+
+/* Content-Styling */
+
 .header {
     font-size: 3vh;
 }
 
 .name {
     font-weight: bold;
+    display: flex;
+}
+
+.name-icon img {
+    margin-top: 0.4vh;
+    width: 3vh;
+    height: auto;
+}
+
+.box {
+    background-color: var(--primary-color);
+    border-radius: 1vh;
+    position: relative;
+}
+
+.box-name {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.pool {
+    font-weight: bold;
+    border: none;
+    margin: 0;
+    text-align: center;
+    border-radius: 0.5vh;
+}
+
+.nuyen-amount, .edge-dice {
+    text-align: center;
+    font-weight: bold; 
+}
+
+.initiatives, .resistances {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.actions, .skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.action, .skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.action-name, .skill-name {
+    text-align: left;
+    width: 50%;
+}
+
+.action-numbers, .skill-numbers {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+
+.body-dmg, .stun-dmg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dmg {
+    appearance: none;
+    width: 4vh;
+    height: 4vh;
+    border-radius: 1vh;
+    background-color: var(--secondary-color);
+}
+
+.dmg:checked {
+    background-color: var(--accent-color);
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1vh;
 }
 
 /* Grid */
@@ -36,8 +132,8 @@ body {
     display: grid;
     grid-template-rows: repeat(15, 1fr);
     grid-template-columns: repeat(20, 1fr);
-    height: 100vh;
-    gap: 2px;
+    height: 90vh;
+    gap: 1vh;
 }
 
 .header {
@@ -63,15 +159,15 @@ body {
 .initiative {
     grid-row-start: 2;
     grid-row-end: 4;
-    grid-column-start: 4;
-    grid-column-end: 9;
+    grid-column-start: 5;
+    grid-column-end: 10;
 }
 
 .edge {
     grid-row-start: 2;
     grid-row-end: 4;
-    grid-column-start: 9;
-    grid-column-end: 10;
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
 
 .resistance {
@@ -109,129 +205,9 @@ body {
     grid-column-end: 16;
 }
 
-/* Box-Styling */
-
-.box {
-    background-color: var(--primary-color);
-    border-radius: 1vh;
-    position: relative;
-}
-
-.box-name {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 10px);
-    padding: 5px;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 2vh;
-}
-
-.nuyen-amount {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5vh;
-    font-weight: bold; 
-    font-size: 3vh;
-}
-
-.edge-dice {
-    color :var(--font-color);
-    text-align: center;
-    padding-top: 0.2rem;
-    font-weight: bold;
-    font-size: 4vh;
-    margin-top: 3.5vh;
-}
-
-.actions, .skills {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2vh;
-}
-
-.skill, .action {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 1.5vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    font-size: 3vh;
-    border-bottom: var(--secondary-color) 0.2vh solid;
-}
-
-.skill-name, .action-name {
-    text-align: left;
-    margin-left: 1vw;
-    width: 50%;
-}
-
-.skill-numbers, .action-numbers {
-    display: flex;
-    flex-direction: row;
-    gap: 5vw;
-}
-
-.skill-value {
-    font-size: 2.5vh;
-}
-
-.pool {
-    font-weight: bold;
-    margin-right: 1vw;
-    border: none;
-    margin: 0;
-    font-size: 3vh;
-    height: 4vh;
-    width: 3vw;
-    text-align: center;
-    border-radius: 0.5vh;
-}
-
-.initiatives, .resistances {
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-}
-
-.initiative-category, .resistance-category {
-    padding-top: 1.5vh;
-    padding-bottom: 0.3vh;
-}
-
-/* Klicki Bunti */
-
-button:hover {
-    cursor: pointer;
-}
-
-.nuyen-amount:hover, .edge-dice:hover {
-    cursor: pointer;
-}
-
-.drain-formula:hover {
-    cursor: pointer;
-}
-
-.body-dmg, .stun-dmg {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2vh;
-}
-
-.dmg {
-    appearance: none;
-    width: 5vh;
-    height: 5vh;
-    border-radius: 1vh;
-    background-color: var(--secondary-color);
-    cursor: pointer;
-}
-
-.dmg:checked {
-    background-color: var(--accent-color);
+.mugshot {
+    grid-row-start: 9;
+    grid-row-end: 15;
+    grid-column-start: 16;
+    grid-column-end: 20;
 }
