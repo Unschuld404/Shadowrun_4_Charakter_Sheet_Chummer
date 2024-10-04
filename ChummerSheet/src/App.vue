@@ -11,7 +11,6 @@ onMounted(() => {
 </script>
 
 <template>
-<div class="container">
    
     <header class="header">
 
@@ -22,16 +21,53 @@ onMounted(() => {
 
       </div>
 
-      <div class="karma">Radikale Ökoschamanin</div>
+      <nav class="navbar">
+        <ul>
+          <li><i class='bx bxs-extension'></i></li>
+          <li><i class='bx bxs-joystick'></i></li>
+          <li><i class='bx bxs-hot'></i></li>
+          <li><i class='bx bxs-magic-wand'></i></li>
+          <li><i class='bx bxs-ghost' ></i></li>
+        </ul>
+      </nav>
+
+      <div class="karma">4 Karma</div>
 
     </header>
 
     <RouterView />
 
-</div>
-
 </template>
 
 <style scoped>
+
+.header {
+  background-color: var(--background-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 4vh;
+      }
+
+.name {
+      font-weight: bold;
+      display: flex;
+      }
+
+.navbar {
+  width: 80%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 25vw;
+  justify-content: space-around;
+}
+
+i:hover {
+  color: var(--accent-color);
+}
 
 </style>

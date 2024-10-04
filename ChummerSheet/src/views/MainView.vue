@@ -23,382 +23,357 @@ onMounted(() => {
 
     <div v-if="showModal" class="modal-overlay">
         <div class="modal-content">
-        <!-- Deine zusätzlichen Elemente hier -->
-        <p>Inhalt des Modals</p>
-        <button @click="closeModal">Schließen</button>
+
+            <div class="modify-pool">
+
+                <button class="use-edge">EDGE</button>
+
+                <div class="dice">5</div>
+
+                <div class="modifyer">
+
+                    <button class="pool-modifyer">+</button>
+                    <button class="pool-modifyer">-</button>
+
+                </div>
+
+            </div>
+
+            <div class="submit-roll">
+
+                <button class="escape" @click="closeModal">ZURÜCK</button>
+                <button class="submit">Los!</button>
+
+            </div>
+
         </div>
     </div>
 
-    <div class="nuyen box">
+    <div class="container">
 
-    <div class="nuyen-amount" v-if="data">{{ data.character.nuyen }}</div>
+        <div class="nuyen box">
 
-    <div class="box-name">Nuyen</div>
+        <div class="nuyen-amount" v-if="data">{{ data.character.nuyen }}</div>
 
-    </div>  
+        <div class="box-name">Nuyen</div>
 
-    <div class="edge box">
+        </div>  
 
-    <div class="edge-dice">{{ getTotalValue('EDG') }}</div>
-    <div class="box-name">Edge</div>
+        <div class="edge box">
 
-    </div>
+        <div class="edge-dice">{{ getTotalValue('EDG') }}</div>
+        <div class="box-name">Edge</div>
 
-    <div class="initiative box">
+        </div>
 
-    <div class="initiatives">
+        <div class="initiative box">
 
-        <div class="initiative">
+        <div class="initiatives">
 
-            <div class="initiative-category">Normal</div>
-            <button class="pool">7</button>
+            <div class="initiative">
+
+                <div class="initiative-category">Normal</div>
+                <button class="pool">7</button>
+            
+            </div>
+
+            <div class="initiative">
+
+                <div class="initiative-category">Matrix</div>
+                <button class="pool">6</button>
+
+            </div>
+
+            <div class="initiative">
+
+                <div class="initiative-category">Astral</div>
+                <button class="pool">8</button>
+
+            </div>
+
+        </div>
+
+        <div class="box-name">Initiative</div>
+
+        </div>
+
+        <div class="resistance box">
+
+        <div class="resistances">
+
+            <div class="resistance">
+
+                <div class="resistance-category">Ballistisch</div>
+                <button class="pool">{{ getArmorProperty('Armor Jacket', 'b') }}</button>
+
+            </div>
+
+            <div class="resistance">
+
+                <div class="resistance-category">Stoß</div>
+                <button class="pool">{{ getArmorProperty('Armor Jacket', 'i') }}</button>
+
+            </div>
+
+            <div class="resistance">
+
+                <div class="resistance-category">Körperlich</div>
+                <button class="pool">{{ getTotalValue('BOD') }}</button>
+
+            </div>
+
+            <div class="resistance">
+
+                <div class="resistance-category">Willenskraft</div>
+                <button class="pool">{{ getTotalValue('WIL') }}</button>
+
+            </div>
+
+            <div class="resistance">
+
+                <div class="resistance-category">Entzug</div>
+                <button class="pool">{{ Number(getTotalValue('CHA')) + Number(getTotalValue('WIL')) }}</button>
+
+            </div>
+
+        </div>
+
+        <div class="box-name">Widerstand</div>
+
+        </div>  
+
+        <div class="fav-skills box">
+
+        <div class="skills">
+
+            <div class="skill">
+
+                <div class="skill-name">Assensing</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">4 + INT 4</div>
+                    <button class="pool">{{ getSkillProperty('Assensing', 'totalvalue') }}</button>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">Ausweichen</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">1 + REA 3</div>
+                    <button class="pool">{{ getSkillProperty('Dodge', 'totalvalue') }}</button>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">Bannen</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">4 + MAG 5</div>
+                    <button class="pool">{{ getSkillProperty('Banishing', 'totalvalue') }}</button>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">Binden</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">4 + MAG 5</div>
+                    <button class="pool">{{ getSkillProperty('Binding', 'totalvalue') }}</button>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">Beschwören</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">4 + MAG 5</div>
+                    <button class="pool">{{ getSkillProperty('Summoning', 'totalvalue') }}</button>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">Etikette</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">1 + CHA 5</div>
+                    <button class="pool">{{ getSkillProperty('Etiquette', 'totalvalue') }}</button>
+
+                </div>
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">Gegenzauber</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">4 + MAG 5</div>
+                    <button class="pool">{{ getSkillProperty('Counterspelling', 'totalvalue') }}</button>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">Heimlichkeit</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">1 + INT 4</div>
+                    <button class="pool">{{ getSkillProperty('Shadowing', 'totalvalue') }}</button>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">Wahrnehmung</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">2 + INT 4</div>
+                    <button class="pool">{{ getSkillProperty('Perception', 'totalvalue') }}</button>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">Zaubern</div>
+                <div class="skill-numbers">
+
+                    <div class="skill-value">4 + MAG 5</div>
+                    <button class="pool">{{ getSkillProperty('Spellcasting', 'totalvalue') }}</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="box-name">Fertigkeiten</div>
+
+        </div>
+
+        <div class="fav-actions box">
+
+        <div class="actions">
+
+            <div class="action">
+                
+                <div class="action-name">Powerblitz</div>
+                <div class="drain-formula">{{ getSpellProperty('Powerbolt', 'dv') }}</div>
+
+            </div>
+
+            <div class="action">
+
+                <div class="action-name">Betäubungsblitz</div>
+                <div class="drain-formula">{{ getSpellProperty('Stunbolt', 'dv') }}</div>
+
+            </div>
+
+            <div class="action">
+
+                <div class="action-name">Verbesserte Unsichtbarkeit</div>
+                <div class="drain-formula">{{ getSpellProperty('Improved Invisibility', 'dv') }}</div>
+
+            </div>
+
+            <div class="action">
+
+                <div class="action-name">Levitieren</div>
+                <div class="drain-formula">{{ getSpellProperty('Levitate', 'dv') }}</div>
+
+            </div>
+
+            <div class="action">
+
+                <div class="action-name">Formwandeln</div>
+                <div class="drain-formula">{{ getSpellProperty('Shapechange', 'dv') }}</div>
+                
+            </div>
+
+        </div>
+
+        <div class="box-name">Specials</div>
+
+        </div>
+
+        <div class="body-condition box">
+
+        <div class="body-dmg">
+
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
         
         </div>
 
-        <div class="initiative">
-
-            <div class="initiative-category">Matrix</div>
-            <button class="pool">6</button>
+        <div class="box-name">Körperlicher Zustand</div>
 
         </div>
 
-        <div class="initiative">
-
-            <div class="initiative-category">Astral</div>
-            <button class="pool">8</button>
-
-        </div>
-
-    </div>
-
-    <div class="box-name">Initiative</div>
-
-    </div>
-
-    <div class="resistance box">
-
-    <div class="resistances">
-
-        <div class="resistance">
-
-            <div class="resistance-category">Ballistisch</div>
-            <button class="pool">{{ getArmorProperty('Armor Jacket', 'b') }}</button>
-
-        </div>
-
-        <div class="resistance">
-
-            <div class="resistance-category">Stoß</div>
-            <button class="pool">{{ getArmorProperty('Armor Jacket', 'i') }}</button>
-
-        </div>
-
-        <div class="resistance">
-
-            <div class="resistance-category">Körperlich</div>
-            <button class="pool">{{ getTotalValue('BOD') }}</button>
-
-        </div>
-
-        <div class="resistance">
-
-            <div class="resistance-category">Willenskraft</div>
-            <button class="pool">{{ getTotalValue('WIL') }}</button>
-
-        </div>
-
-        <div class="resistance">
-
-            <div class="resistance-category">Entzug</div>
-            <button class="pool">{{ Number(getTotalValue('CHA')) + Number(getTotalValue('WIL')) }}</button>
-
-        </div>
-
-    </div>
-
-    <div class="box-name">Widerstand</div>
-
-    </div>  
-
-    <div class="fav-skills box">
-
-    <div class="skills">
-
-        <div class="skill">
-
-            <div class="skill-name">Assensing</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">4 + INT 4</div>
-                <button class="pool">{{ getSkillProperty('Assensing', 'totalvalue') }}</button>
-
-            </div>
-
-        </div>
-
-        <div class="skill">
-
-            <div class="skill-name">Ausweichen</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">1 + REA 3</div>
-                <button class="pool">{{ getSkillProperty('Dodge', 'totalvalue') }}</button>
-
-            </div>
-
-        </div>
-
-        <div class="skill">
-
-            <div class="skill-name">Bannen</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">{{ getSkillProperty('Banishing', 'totalvalue') }}</button>
-
-            </div>
-
-        </div>
-
-        <div class="skill">
-
-            <div class="skill-name">Binden</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">{{ getSkillProperty('Binding', 'totalvalue') }}</button>
-
-            </div>
-
-        </div>
-
-        <div class="skill">
-
-            <div class="skill-name">Beschwören</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">{{ getSkillProperty('Summoning', 'totalvalue') }}</button>
-
-            </div>
-
-        </div>
-
-        <div class="skill">
-
-            <div class="skill-name">Etikette</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">1 + CHA 5</div>
-                <button class="pool">{{ getSkillProperty('Etiquette', 'totalvalue') }}</button>
-
-            </div>
-        </div>
-
-
-        <div class="skill">
-
-            <div class="skill-name">Gegenzauber</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">{{ getSkillProperty('Counterspelling', 'totalvalue') }}</button>
-
-            </div>
-
-        </div>
-
-        <div class="skill">
-
-            <div class="skill-name">Heimlichkeit</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">1 + INT 4</div>
-                <button class="pool">{{ getSkillProperty('Shadowing', 'totalvalue') }}</button>
-
-            </div>
-
-        </div>
-
-        <div class="skill">
-
-            <div class="skill-name">Wahrnehmung</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">2 + INT 4</div>
-                <button class="pool">{{ getSkillProperty('Perception', 'totalvalue') }}</button>
-
-            </div>
-
-        </div>
-
-        <div class="skill">
-
-            <div class="skill-name">Zaubern</div>
-            <div class="skill-numbers">
-
-                <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">{{ getSkillProperty('Spellcasting', 'totalvalue') }}</button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="box-name">Fertigkeiten</div>
-
-    </div>
-
-    <div class="fav-actions box">
-
-    <div class="actions">
-
-        <div class="action">
-            
-            <div class="action-name">Powerblitz</div>
-            <div class="drain-formula">{{ getSpellProperty('Powerbolt', 'dv') }}</div>
-
-        </div>
-
-        <div class="action">
-
-            <div class="action-name">Betäubungsblitz</div>
-            <div class="drain-formula">{{ getSpellProperty('Stunbolt', 'dv') }}</div>
-
-        </div>
-
-        <div class="action">
-
-            <div class="action-name">Verbesserte Unsichtbarkeit</div>
-            <div class="drain-formula">{{ getSpellProperty('Improved Invisibility', 'dv') }}</div>
-
-        </div>
-
-        <div class="action">
-
-            <div class="action-name">Levitieren</div>
-            <div class="drain-formula">{{ getSpellProperty('Levitate', 'dv') }}</div>
-
-        </div>
-
-        <div class="action">
-
-            <div class="action-name">Formwandeln</div>
-            <div class="drain-formula">{{ getSpellProperty('Shapechange', 'dv') }}</div>
-            
-        </div>
-
-    </div>
-
-    <div class="box-name">Specials</div>
-
-    </div>
-
-    <div class="body-condition box">
-
-    <div class="body-dmg">
-
-        <div class="row">
-
+        <div class="stun-condition box">
+
+        <div class="stun-dmg">
+
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
+            <input type="checkbox" class="dmg">
             <input type="checkbox" class="dmg">
             <input type="checkbox" class="dmg">
             <input type="checkbox" class="dmg">
 
         </div>
 
-        <div class="row">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
+        <div class="box-name">Geistiger Zustand</div>
 
         </div>
 
-        <div class="row">
+        <div class="mugshot box" @click="openModal">
 
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
+        <img src="/public/Kaya_Portrait.png" alt="Charakterportrait">
 
         </div>
-
-        <div class="row">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-
-        </div>
-
-        <div class="row">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-
-        </div>
-
-        <div class="row">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-
-        </div>
-    
-
-    </div>
-
-    <div class="box-name">Körperlicher Zustand</div>
-
-    </div>
-
-    <div class="mental-condition box">
-
-    <div class="stun-dmg">
-
-        <div class="row">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-
-        </div>
-
-        <div class="row">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-
-        </div>
-
-        <div class="row">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-
-        </div>
-
-        <div class="row">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-
-        </div>
-
-    </div>
-
-    <div class="box-name">Geistiger Zustand</div>
-
-    </div>
-
-    <div class="mugshot box" @click="openModal">
-
-    <img src="/public/Kaya_Portrait.png" alt="Charakterportrait">
 
     </div>
 
@@ -411,21 +386,6 @@ onMounted(() => {
     }
 
     /* Content-Styling */
-
-    .header {
-        font-size: 4vh;
-    }
-
-    .name {
-        font-weight: bold;
-        display: flex;
-    }
-
-    .name-icon img {
-        margin-top: 0.4vh;
-        width: 3vh;
-        height: auto;
-    }
 
     .box {
         background-color: var(--primary-color);
@@ -451,7 +411,7 @@ onMounted(() => {
         height: 100%;
         text-align: center;
         font-weight: bold; 
-        font-size: 2.5vh;
+        font-size: 5vh;
         color: var(--accent-color);
     }
 
@@ -469,6 +429,10 @@ onMounted(() => {
         background-color: var(--secondary-color)
     }
 
+    .pool:active {
+        background-color: var(--font-color);
+    }
+
     .initiative, .resistance {
         display: flex;
         flex-direction: column;
@@ -479,7 +443,7 @@ onMounted(() => {
         display: flex;
         justify-content: space-evenly;
         width: 100%;
-        margin-top: 0.6vh;
+        margin-top: 1.5vh;
     }
 
     .initiative-categories {
@@ -511,8 +475,10 @@ onMounted(() => {
     .skill-numbers {
         display: flex;
         flex-direction: row;
-        gap: 5vw;
+        justify-content: space-between;
+        width: 40%;
     }
+
 
     .drain-formula {
         font-weight: bold;
@@ -520,21 +486,18 @@ onMounted(() => {
 
     .body-dmg, .stun-dmg {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
-        gap: 1vh;
+        gap: 0.5vh;
         margin-top: 1vh;
-    }
-
-    .row {
-        display: flex;
-        gap: 1vh;
+        justify-content: center;
+        margin-top: 3vh;
     }
 
     .dmg {
         appearance: none;
-        width: 4vh;
-        height: 4vh;
+        width: 4.5vh;
+        height: 4.5vh;
         border-radius: 0.5vh;
         background-color: var(--secondary-color);
     }
@@ -551,95 +514,9 @@ onMounted(() => {
         border-radius: 1vh;
     }
 
-    /* Grid */
+        /* Modal */
 
-    .container {
-        display: grid;
-        grid-template-rows: repeat(15, 1fr);
-        grid-template-columns: repeat(20, 1fr);
-        height: 90vh;
-        gap: 1vh;
-    }
-
-    .header {
-        grid-row-start: 1;
-        grid-row-end: 1;
-        grid-column-start: 1;
-        grid-column-end: 21;
-        background-color: var(--background-color);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .nuyen {
-        grid-row-start: 2;
-        grid-row-end: 4;
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
-
-    .initiative {
-        grid-row-start: 2;
-        grid-row-end: 4;
-        grid-column-start: 5;
-        grid-column-end: 10;
-    }
-
-    .edge {
-        grid-row-start: 2;
-        grid-row-end: 4;
-        grid-column-start: 4;
-        grid-column-end: 5;
-    }
-
-    .resistance {
-        grid-row-start: 2;
-        grid-row-end: 4;
-        grid-column-start: 10;
-        grid-column-end: 20;
-    }
-
-    .fav-skills {
-        grid-row-start: 4;
-        grid-row-end: 15;
-        grid-column-start: 2;
-        grid-column-end: 10;
-    }
-
-    .fav-actions {
-        grid-row-start: 4;
-        grid-row-end: 9;
-        grid-column-start: 10;
-        grid-column-end: 20;
-    }
-
-    .body-condition {
-        grid-row-start: 9;
-        grid-row-end: 15;
-        grid-column-start: 10;
-        grid-column-end: 13;
-    }
-
-    .mental-condition {
-        grid-row-start: 9;
-        grid-row-end: 15;
-        grid-column-start: 13;
-        grid-column-end: 16;
-    }
-
-    .mugshot {
-        grid-row-start: 9;
-        grid-row-end: 15;
-        grid-column-start: 16;
-        grid-column-end: 20;
-    }
-
-    /* Modal */
-
-    .modal-overlay {
+        .modal-overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -653,11 +530,171 @@ onMounted(() => {
     }
 
     .modal-content {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--primary-color);
+        border-radius: 2vh;
+        width: 30vw;
+        height: 25vh;
+        border: 0.1vh solid var(--font-color);
+    }
+
+    .modify-pool {
+        display: flex;
+        flex-direction: row;
         width: 100%;
+        justify-content: space-evenly;
+        height: 60%;
+        margin-top: 1vh;
+    }
+
+    .use-edge {
+        height: 8vh;
+        width: 8vh;
+        border: none;
+        font-size: 3vh;
+        margin-top: 4vh;
+    }
+
+    .use-edge:active {
+        background-color: var(--accent-color);
+        color: var(--background-color);
+    }
+
+    .pool-modifyer {
+        border: none;
+        background-color:var(--secondary-color);
+        height: 7vh;
+        font-size: 8vh;
+        line-height: 7vh;
+        border-radius: 1vh;
+        color: var(--accent-color)
+    }
+
+    .pool-modifyer:active {
+        background-color: var(--accent-color);
+        color: var(--background-color);
+    }
+
+    .dice {
+        width: 20vh;
+        text-align: center;
+        font-size: 10vh;
+        font-weight: bold;
+        color: var(--accent-color);
+        line-height: 15vh;
+        margin-top: 0.5vh;
+    }
+
+    .modifyer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 8vh;
+    }
+
+    .submit-roll {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        height: 30%;
+    }
+
+    .submit-roll button {
+        background-color: var(--background-color);
+        color: var(--font-color);
+        border: 0.1vh solid var(--font-color);
+        font-size: 3vh;
+    }
+
+    .submit-roll button:active {
+        background-color: var(--font-color);
+        color: var(--background-color);
+    }
+
+    .escape {
+        border-radius: 0 0 0 2vh;
+        width: 30%;
+    }
+
+    .submit {
+        border-radius: 0 0 2vh 0;
+        width: 70%;
+    }
+
+    /* Grid */
+
+    .container {
+        display: grid;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(10, 1fr);
+        height: 90vh;
+        gap: 1vh;
+    }
+
+    .nuyen {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .edge {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .initiative {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 4;
+        grid-column-end: 7;
+    }
+
+    .resistance {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 7;
+        grid-column-end: 11;
+    }
+
+    .fav-skills {
+        grid-row-start: 2;
+        grid-row-end: 8;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .body-condition {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 11;
+    }
+
+    .stun-condition {
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 11;
+    }
+
+    .fav-actions {
+        grid-row-start: 4;
+        grid-row-end: 8;
+        grid-column-start: 4;
+        grid-column-end: 8;
+    }
+
+    .mugshot {
+        grid-row-start: 4;
+        grid-row-end: 8;
+        grid-column-start: 8;
+        grid-column-end: 11;
     }
 
 </style>
