@@ -631,6 +631,9 @@ onMounted(() => {
         grid-template-rows: repeat(7, 1fr);
         grid-template-columns: repeat(10, 1fr);
         height: 90vh;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
         gap: 1vh;
     }
 

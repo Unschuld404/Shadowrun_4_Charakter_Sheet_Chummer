@@ -23,11 +23,13 @@ onMounted(() => {
 
       <nav class="navbar">
         <ul>
-          <li><i class='bx bxs-extension'></i></li>
-          <li><i class='bx bxs-joystick'></i></li>
-          <li><i class='bx bxs-hot'></i></li>
-          <li><i class='bx bxs-magic-wand'></i></li>
-          <li><i class='bx bxs-ghost' ></i></li>
+
+          <li><RouterLink to="main" class="nav-link"><i class='bx bxs-extension'></i></RouterLink></li>
+          <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
+          <li><RouterLink to="weapons" class="nav-link"><i class='bx bxs-hot'></i></RouterLink></li>
+          <li><RouterLink to="spells" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
+          <li><RouterLink to="spirits" class="nav-link"><i class='bx bxs-ghost' ></i></RouterLink></li>
+
         </ul>
       </nav>
 
@@ -52,22 +54,36 @@ onMounted(() => {
 .name {
       font-weight: bold;
       display: flex;
+      width: 30%;
       }
 
 .navbar {
-  width: 80%;
+  width: 30%;
+  align-items: center;
+}
+
+.karma {
+  width: 30%;
+  text-align: right;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  width: 25vw;
   justify-content: space-around;
 }
 
 i:hover {
   color: var(--accent-color);
+}
+
+.nav-link {
+  color: var(--font-color)
+}
+
+.router-link-active {
+  color: var(--accent-color)
 }
 
 </style>
