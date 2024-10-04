@@ -1,94 +1,23 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { useCharacterData } from '../composables/useCharacterData'; // Pfad zur neuen Datei
+
+const { data, fetchData, getTotalValue, getSkillProperty, getSpellProperty, getArmorProperty } = useCharacterData('Kaya');
 
 const showModal = ref(false);
 
-function openModal() 
-{
+function openModal() {
     showModal.value = true;
 }
 
-function closeModal() 
-{
+function closeModal() {
     showModal.value = false;
 }
 
-const data = ref<any>(null);
-const id = 'Kaya';
-
-async function fetchData()
-{
-    try
-    {
-        const response = await fetch(`https://api.blackserver.de/chummer/data/${id}`);
-        if (!response.ok)
-        {
-            throw new Error(`Fehler: ${response.status}`);
-        }
-        data.value = await response.json();
-        console.log('Abgerufene Daten:', data.value);
-    }
-    catch (err)
-    {
-        console.error('Ein Fehler ist aufgetreten:', err);
-    }
-}
-
-onMounted(function()
-{
+onMounted(() => {
     fetchData();
 });
-
-/** Funktion zum Abrufen des totalvalue basierend auf dem Attributnamen */
-function getTotalValue(attributeName: string): string | null
-{
-    const attributesArray = data.value?.character?.attributes?.attribute;
-    if (attributesArray && Array.isArray(attributesArray))
-    {
-        const attribute = attributesArray.find((attr: any) => attr.name === attributeName);
-        return attribute ? attribute.totalvalue : null;
-    }
-    return null;
-}
-
-/** Funktion zum Abrufen einer Eigenschaft eines Skills basierend auf dem Namen */
-function getSkillProperty(skillName: string, property: string): string | null
-{
-    const skillsArray = data.value?.character?.skills?.skill;
-    if (skillsArray && Array.isArray(skillsArray))
-    {
-        const skill = skillsArray.find((sk: any) => sk.name === skillName);
-        return skill ? skill[property] : null;
-    }
-    return null;
-}
-
-/** Funktion zum Abrufen einer Eigenschaft eines Spells basierend auf dem Namen */
-function getSpellProperty(spellName: string, property: string): string | null
-{
-    const spellsArray = data.value?.character?.spells?.spell;
-    if (spellsArray && Array.isArray(spellsArray))
-    {
-        const spell = spellsArray.find((sp: any) => sp.name === spellName);
-        return spell ? spell[property] : null;
-    }
-    return null;
-}
-
-/** Funktion zum Abrufen einer Eigenschaft eines Rüstungsteils basierend auf dem Namen */
-function getArmorProperty(armorName: string, property: string): string | null
-{
-    const armorsArray = data.value?.character?.armors?.armor;
-    if (armorsArray && Array.isArray(armorsArray))
-    {
-        const armor = armorsArray.find((ar: any) => ar.name === armorName);
-        return armor ? armor[property] : null;
-    }
-    return null;
-}
-
 </script>
-
 
 <template>
 
