@@ -1,33 +1,94 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
 
-    import { ref } from 'vue';
+const showModal = ref(false);
 
-    const edge = ref(3);
+function openModal() 
+{
+    showModal.value = true;
+}
 
-    function add():void
+function closeModal() 
+{
+    showModal.value = false;
+}
+
+const data = ref<any>(null);
+const id = 'Kaya';
+
+async function fetchData()
+{
+    try
     {
-        edge.value = edge.value + 1;
+        const response = await fetch(`https://api.blackserver.de/chummer/data/${id}`);
+        if (!response.ok)
+        {
+            throw new Error(`Fehler: ${response.status}`);
+        }
+        data.value = await response.json();
+        console.log('Abgerufene Daten:', data.value);
     }
-
-    const showModal = ref(false);
-
-    function openModal() 
+    catch (err)
     {
-        showModal.value = true;
+        console.error('Ein Fehler ist aufgetreten:', err);
     }
+}
 
-    function closeModal() 
-    {
-        showModal.value = false;
-    }
+onMounted(function()
+{
+    fetchData();
+});
 
-    async function ladeDaten(): Promise<void> 
+/** Funktion zum Abrufen des totalvalue basierend auf dem Attributnamen */
+function getTotalValue(attributeName: string): string | null
+{
+    const attributesArray = data.value?.character?.attributes?.attribute;
+    if (attributesArray && Array.isArray(attributesArray))
     {
-        const response = await fetch('https://api.blackserver.de/chummer/roll');
-        edge.value = Number(await response.text());
+        const attribute = attributesArray.find((attr: any) => attr.name === attributeName);
+        return attribute ? attribute.totalvalue : null;
     }
+    return null;
+}
+
+/** Funktion zum Abrufen einer Eigenschaft eines Skills basierend auf dem Namen */
+function getSkillProperty(skillName: string, property: string): string | null
+{
+    const skillsArray = data.value?.character?.skills?.skill;
+    if (skillsArray && Array.isArray(skillsArray))
+    {
+        const skill = skillsArray.find((sk: any) => sk.name === skillName);
+        return skill ? skill[property] : null;
+    }
+    return null;
+}
+
+/** Funktion zum Abrufen einer Eigenschaft eines Spells basierend auf dem Namen */
+function getSpellProperty(spellName: string, property: string): string | null
+{
+    const spellsArray = data.value?.character?.spells?.spell;
+    if (spellsArray && Array.isArray(spellsArray))
+    {
+        const spell = spellsArray.find((sp: any) => sp.name === spellName);
+        return spell ? spell[property] : null;
+    }
+    return null;
+}
+
+/** Funktion zum Abrufen einer Eigenschaft eines Rüstungsteils basierend auf dem Namen */
+function getArmorProperty(armorName: string, property: string): string | null
+{
+    const armorsArray = data.value?.character?.armors?.armor;
+    if (armorsArray && Array.isArray(armorsArray))
+    {
+        const armor = armorsArray.find((ar: any) => ar.name === armorName);
+        return armor ? armor[property] : null;
+    }
+    return null;
+}
 
 </script>
+
 
 <template>
 
@@ -41,7 +102,7 @@
 
     <div class="nuyen box">
 
-    <div class="nuyen-amount">555.600 ¥</div>
+    <div class="nuyen-amount" v-if="data">{{ data.character.nuyen }}</div>
 
     <div class="box-name">Nuyen</div>
 
@@ -49,7 +110,7 @@
 
     <div class="edge box">
 
-    <div class="edge-dice" @click="add">{{ edge }}</div>
+    <div class="edge-dice">{{ getTotalValue('EDG') }}</div>
     <div class="box-name">Edge</div>
 
     </div>
@@ -61,14 +122,14 @@
         <div class="initiative">
 
             <div class="initiative-category">Normal</div>
-            <button class="pool"  @click="openModal">7</button>
+            <button class="pool">7</button>
         
         </div>
 
         <div class="initiative">
 
             <div class="initiative-category">Matrix</div>
-            <button class="pool" @click="ladeDaten">6</button>
+            <button class="pool">6</button>
 
         </div>
 
@@ -92,35 +153,35 @@
         <div class="resistance">
 
             <div class="resistance-category">Ballistisch</div>
-            <button class="pool">8</button>
+            <button class="pool">{{ getArmorProperty('Armor Jacket', 'b') }}</button>
 
         </div>
 
         <div class="resistance">
 
             <div class="resistance-category">Stoß</div>
-            <button class="pool">6</button>
+            <button class="pool">{{ getArmorProperty('Armor Jacket', 'i') }}</button>
 
         </div>
 
         <div class="resistance">
 
             <div class="resistance-category">Körperlich</div>
-            <button class="pool">4</button>
+            <button class="pool">{{ getTotalValue('BOD') }}</button>
 
         </div>
 
         <div class="resistance">
 
             <div class="resistance-category">Willenskraft</div>
-            <button class="pool">6</button>
+            <button class="pool">{{ getTotalValue('WIL') }}</button>
 
         </div>
 
         <div class="resistance">
 
             <div class="resistance-category">Entzug</div>
-            <button class="pool">11</button>
+            <button class="pool">{{ Number(getTotalValue('CHA')) + Number(getTotalValue('WIL')) }}</button>
 
         </div>
 
@@ -140,7 +201,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">4 + INT 4</div>
-                <button class="pool">8</button>
+                <button class="pool">{{ getSkillProperty('Assensing', 'totalvalue') }}</button>
 
             </div>
 
@@ -152,7 +213,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">1 + REA 3</div>
-                <button class="pool">4</button>
+                <button class="pool">{{ getSkillProperty('Dodge', 'totalvalue') }}</button>
 
             </div>
 
@@ -164,7 +225,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">9</button>
+                <button class="pool">{{ getSkillProperty('Banishing', 'totalvalue') }}</button>
 
             </div>
 
@@ -176,7 +237,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">9</button>
+                <button class="pool">{{ getSkillProperty('Binding', 'totalvalue') }}</button>
 
             </div>
 
@@ -188,7 +249,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">9</button>
+                <button class="pool">{{ getSkillProperty('Summoning', 'totalvalue') }}</button>
 
             </div>
 
@@ -200,7 +261,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">1 + CHA 5</div>
-                <button class="pool">6</button>
+                <button class="pool">{{ getSkillProperty('Etiquette', 'totalvalue') }}</button>
 
             </div>
         </div>
@@ -212,7 +273,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">9</button>
+                <button class="pool">{{ getSkillProperty('Counterspelling', 'totalvalue') }}</button>
 
             </div>
 
@@ -224,7 +285,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">1 + INT 4</div>
-                <button class="pool">4</button>
+                <button class="pool">{{ getSkillProperty('Shadowing', 'totalvalue') }}</button>
 
             </div>
 
@@ -236,7 +297,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">2 + INT 4</div>
-                <button class="pool">6</button>
+                <button class="pool">{{ getSkillProperty('Perception', 'totalvalue') }}</button>
 
             </div>
 
@@ -248,7 +309,7 @@
             <div class="skill-numbers">
 
                 <div class="skill-value">4 + MAG 5</div>
-                <button class="pool">9</button>
+                <button class="pool">{{ getSkillProperty('Spellcasting', 'totalvalue') }}</button>
 
             </div>
 
@@ -267,35 +328,35 @@
         <div class="action">
             
             <div class="action-name">Powerblitz</div>
-            <div class="drain-formula">(F÷2)+1</div>
+            <div class="drain-formula">{{ getSpellProperty('Powerbolt', 'dv') }}</div>
 
         </div>
 
         <div class="action">
 
             <div class="action-name">Betäubungsblitz</div>
-            <div class="drain-formula">(F÷2)-1</div>
+            <div class="drain-formula">{{ getSpellProperty('Stunbolt', 'dv') }}</div>
 
         </div>
 
         <div class="action">
 
             <div class="action-name">Verbesserte Unsichtbarkeit</div>
-            <div class="drain-formula">(F÷2)+1</div>
+            <div class="drain-formula">{{ getSpellProperty('Improved Invisibility', 'dv') }}</div>
 
         </div>
 
         <div class="action">
 
             <div class="action-name">Levitieren</div>
-            <div class="drain-formula">(F÷2)-1</div>
+            <div class="drain-formula">{{ getSpellProperty('Levitate', 'dv') }}</div>
 
         </div>
 
         <div class="action">
 
             <div class="action-name">Formwandeln</div>
-            <div class="drain-formula">(F÷2)+2</div>
+            <div class="drain-formula">{{ getSpellProperty('Shapechange', 'dv') }}</div>
             
         </div>
 
@@ -406,7 +467,7 @@
 
     </div>
 
-    <div class="mugshot box">
+    <div class="mugshot box" @click="openModal">
 
     <img src="/public/Kaya_Portrait.png" alt="Charakterportrait">
 
