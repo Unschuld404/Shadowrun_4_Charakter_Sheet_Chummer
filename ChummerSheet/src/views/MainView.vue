@@ -28,7 +28,7 @@ onMounted(() => {
 
                 <button class="use-edge">EDGE</button>
 
-                <div class="dice">5</div>
+                <div class="dice">00</div>
 
                 <div class="modifyer">
 
@@ -53,7 +53,7 @@ onMounted(() => {
 
         <div class="nuyen box">
 
-        <div class="nuyen-amount" v-if="data">{{ data.character.nuyen }}</div>
+        <div class="nuyen-amount">5600 ¥</div>
 
         <div class="box-name">Nuyen</div>
 
@@ -61,7 +61,7 @@ onMounted(() => {
 
         <div class="edge box">
 
-        <div class="edge-dice">{{ getTotalValue('EDG') }}</div>
+        <div class="edge-dice">3</div>
         <div class="box-name">Edge</div>
 
         </div>
@@ -104,35 +104,35 @@ onMounted(() => {
             <div class="resistance">
 
                 <div class="resistance-category">Ballistisch</div>
-                <button class="pool">{{ getArmorProperty('Armor Jacket', 'b') }}</button>
+                <button class="pool">6</button>
 
             </div>
 
             <div class="resistance">
 
                 <div class="resistance-category">Stoß</div>
-                <button class="pool">{{ getArmorProperty('Armor Jacket', 'i') }}</button>
+                <button class="pool">8</button>
 
             </div>
 
             <div class="resistance">
 
                 <div class="resistance-category">Körperlich</div>
-                <button class="pool">{{ getTotalValue('BOD') }}</button>
+                <button class="pool">4</button>
 
             </div>
 
             <div class="resistance">
 
                 <div class="resistance-category">Willenskraft</div>
-                <button class="pool">{{ getTotalValue('WIL') }}</button>
+                <button class="pool">6</button>
 
             </div>
 
             <div class="resistance">
 
                 <div class="resistance-category">Entzug</div>
-                <button class="pool">{{ Number(getTotalValue('CHA')) + Number(getTotalValue('WIL')) }}</button>
+                <button class="pool">6</button>
 
             </div>
 
@@ -142,125 +142,125 @@ onMounted(() => {
 
         </div>  
 
-        <div class="fav-skills box">
+        <div class="fav-skills-box box">
 
-        <div class="skills">
+        <div class="fav-skills">
 
-            <div class="skill">
+            <div class="fav-skill">
 
-                <div class="skill-name">Assensing</div>
-                <div class="skill-numbers">
+                <div class="fav-skill-name">Assensing</div>
+                <div class="fav-skill-numbers">
 
-                    <div class="skill-value">4 + INT 4</div>
-                    <button class="pool">{{ getSkillProperty('Assensing', 'totalvalue') }}</button>
-
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <div class="skill-name">Ausweichen</div>
-                <div class="skill-numbers">
-
-                    <div class="skill-value">1 + REA 3</div>
-                    <button class="pool">{{ getSkillProperty('Dodge', 'totalvalue') }}</button>
+                    <div class="fav-skill-value">4 + INT 4</div>
+                    <button class="pool">8</button>
 
                 </div>
 
             </div>
 
-            <div class="skill">
+            <div class="fav-skill">
 
-                <div class="skill-name">Bannen</div>
-                <div class="skill-numbers">
+                <div class="fav-skill-name">Ausweichen</div>
+                <div class="fav-skill-numbers">
 
-                    <div class="skill-value">4 + MAG 5</div>
-                    <button class="pool">{{ getSkillProperty('Banishing', 'totalvalue') }}</button>
-
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <div class="skill-name">Binden</div>
-                <div class="skill-numbers">
-
-                    <div class="skill-value">4 + MAG 5</div>
-                    <button class="pool">{{ getSkillProperty('Binding', 'totalvalue') }}</button>
+                    <div class="fav-skill-value">1 + REA 3</div>
+                    <button class="pool">4</button>
 
                 </div>
 
             </div>
 
-            <div class="skill">
+            <div class="fav-skill">
 
-                <div class="skill-name">Beschwören</div>
-                <div class="skill-numbers">
+                <div class="fav-skill-name">Bannen</div>
+                <div class="fav-skill-numbers">
 
-                    <div class="skill-value">4 + MAG 5</div>
-                    <button class="pool">{{ getSkillProperty('Summoning', 'totalvalue') }}</button>
-
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <div class="skill-name">Etikette</div>
-                <div class="skill-numbers">
-
-                    <div class="skill-value">1 + CHA 5</div>
-                    <button class="pool">{{ getSkillProperty('Etiquette', 'totalvalue') }}</button>
-
-                </div>
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-name">Gegenzauber</div>
-                <div class="skill-numbers">
-
-                    <div class="skill-value">4 + MAG 5</div>
-                    <button class="pool">{{ getSkillProperty('Counterspelling', 'totalvalue') }}</button>
+                    <div class="fav-skill-value">4 + MAG 5</div>
+                    <button class="pool">9</button>
 
                 </div>
 
             </div>
 
-            <div class="skill">
+            <div class="fav-skill">
 
-                <div class="skill-name">Heimlichkeit</div>
-                <div class="skill-numbers">
+                <div class="fav-skill-name">Binden</div>
+                <div class="fav-skill-numbers">
 
-                    <div class="skill-value">1 + INT 4</div>
-                    <button class="pool">{{ getSkillProperty('Shadowing', 'totalvalue') }}</button>
-
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <div class="skill-name">Wahrnehmung</div>
-                <div class="skill-numbers">
-
-                    <div class="skill-value">2 + INT 4</div>
-                    <button class="pool">{{ getSkillProperty('Perception', 'totalvalue') }}</button>
+                    <div class="fav-skill-value">4 + MAG 5</div>
+                    <button class="pool">9</button>
 
                 </div>
 
             </div>
 
-            <div class="skill">
+            <div class="fav-skill">
 
-                <div class="skill-name">Zaubern</div>
-                <div class="skill-numbers">
+                <div class="fav-skill-name">Beschwören</div>
+                <div class="fav-skill-numbers">
 
-                    <div class="skill-value">4 + MAG 5</div>
-                    <button class="pool">{{ getSkillProperty('Spellcasting', 'totalvalue') }}</button>
+                    <div class="fav-skill-value">4 + MAG 5</div>
+                    <button class="pool">9</button>
+
+                </div>
+
+            </div>
+
+            <div class="fav-skill">
+
+                <div class="fav-skill-name">Etikette</div>
+                <div class="fav-skill-numbers">
+
+                    <div class="fav-skill-value">1 + CHA 5</div>
+                    <button class="pool">6</button>
+
+                </div>
+            </div>
+
+
+            <div class="fav-skill">
+
+                <div class="fav-skill-name">Gegenzauber</div>
+                <div class="fav-skill-numbers">
+
+                    <div class="fav-skill-value">4 + MAG 5</div>
+                    <button class="pool">9</button>
+
+                </div>
+
+            </div>
+
+            <div class="fav-skill">
+
+                <div class="fav-skill-name">Heimlichkeit</div>
+                <div class="fav-skill-numbers">
+
+                    <div class="fav-skill-value">1 + INT 4</div>
+                    <button class="pool">5</button>
+
+                </div>
+
+            </div>
+
+            <div class="fav-skill">
+
+                <div class="fav-skill-name">Wahrnehmung</div>
+                <div class="fav-skill-numbers">
+
+                    <div class="fav-skill-value">2 + INT 4</div>
+                    <button class="pool">6</button>
+
+                </div>
+
+            </div>
+
+            <div class="fav-skill">
+
+                <div class="fav-skill-name">Zaubern</div>
+                <div class="fav-skill-numbers">
+
+                    <div class="fav-skill-value">4 + MAG 5</div>
+                    <button class="pool">9</button>
 
                 </div>
 
@@ -279,35 +279,35 @@ onMounted(() => {
             <div class="action">
                 
                 <div class="action-name">Powerblitz</div>
-                <div class="drain-formula">{{ getSpellProperty('Powerbolt', 'dv') }}</div>
+                <div class="drain-formula">(F/2)+1</div>
 
             </div>
 
             <div class="action">
 
                 <div class="action-name">Betäubungsblitz</div>
-                <div class="drain-formula">{{ getSpellProperty('Stunbolt', 'dv') }}</div>
+                <div class="drain-formula">(F/2)-1</div>
 
             </div>
 
             <div class="action">
 
                 <div class="action-name">Verbesserte Unsichtbarkeit</div>
-                <div class="drain-formula">{{ getSpellProperty('Improved Invisibility', 'dv') }}</div>
+                <div class="drain-formula">(F/2)+1</div>
 
             </div>
 
             <div class="action">
 
                 <div class="action-name">Levitieren</div>
-                <div class="drain-formula">{{ getSpellProperty('Levitate', 'dv') }}</div>
+                <div class="drain-formula">(F/2)+1</div>
 
             </div>
 
             <div class="action">
 
                 <div class="action-name">Formwandeln</div>
-                <div class="drain-formula">{{ getSpellProperty('Shapechange', 'dv') }}</div>
+                <div class="drain-formula">(F/2)+2</div>
                 
             </div>
 
@@ -379,7 +379,7 @@ onMounted(() => {
 
 </template>
 
-<style>
+<style scoped>
 
     button:hover, .nuyen-amount, .edge-dice, .drain-formula, .dmg  {
         cursor: pointer;
@@ -450,7 +450,7 @@ onMounted(() => {
         margin-top: 0.6vh;
     }
 
-    .actions, .skills {
+    .actions, .fav-skills {
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -459,7 +459,7 @@ onMounted(() => {
         margin-top: 1vh;
     }
 
-    .action, .skill {
+    .action, .fav-skill {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -467,12 +467,12 @@ onMounted(() => {
         line-height: 5vh;
     }
 
-    .action-name, .skill-name {
+    .action-name, .fav-skill-name {
         text-align: left;
         width: 50%;
     }
 
-    .skill-numbers {
+    .fav-skill-numbers {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -665,7 +665,7 @@ onMounted(() => {
         grid-column-end: 11;
     }
 
-    .fav-skills {
+    .fav-skills-box {
         grid-row-start: 2;
         grid-row-end: 8;
         grid-column-start: 1;

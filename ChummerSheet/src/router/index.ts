@@ -4,6 +4,7 @@ import SkillView from '@/views/SkillView.vue'
 import WeaponView from '@/views/WeaponView.vue'
 import SpellView from '@/views/SpellView.vue'
 import SpiritView from '@/views/SpiritView.vue'
+import VehicleView from '@/views/VehicleView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,14 +25,19 @@ const router = createRouter({
       component: SkillView
     },
     {
-      path: '/weapon',
-      name: 'weapon',
+      path: '/weapons',
+      name: 'weapons',
       component: WeaponView
     },
     {
       path: '/spells',
       name: 'spells',
       component: SpellView
+    },
+    {
+      path: '/vehicles',
+      name: 'vehicles',
+      component: VehicleView
     },
     {
       path: '/spirits',

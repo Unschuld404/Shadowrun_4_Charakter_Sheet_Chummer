@@ -16,17 +16,17 @@ onMounted(() => {
 
       <div class="name">
 
-        <div class="name-name" v-if="data && data.character">{{ data.character.name }}</div>
-        <div class="name-name" v-else></div>
+        <div class="name-name">Kaya</div>
 
       </div>
 
       <nav class="navbar">
         <ul>
 
-          <li><RouterLink to="main" class="nav-link"><i class='bx bxs-extension'></i></RouterLink></li>
+          <li><RouterLink to="main" class="nav-link"><i class='bx bxs-home'></i></RouterLink></li>
           <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
           <li><RouterLink to="weapons" class="nav-link"><i class='bx bxs-hot'></i></RouterLink></li>
+          <li><RouterLink to="vehicles" class="nav-link"><i class='bx bxs-car-crash'></i></RouterLink></li>
           <li><RouterLink to="spells" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
           <li><RouterLink to="spirits" class="nav-link"><i class='bx bxs-ghost' ></i></RouterLink></li>
 
