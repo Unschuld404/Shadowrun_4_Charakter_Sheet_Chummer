@@ -11,7 +11,7 @@ console.log(data.value);
 
 <template>
 
-    <div class="all-skills">
+    <div class="container">
 
         <div class="active-skills">
 
@@ -671,21 +671,9 @@ console.log(data.value);
 
 <style scoped>
 
-.all-skills {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
-    height: 80vh;
-    margin-top: 5vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .active-skills, .knowledge-skills {
-    width: 49%;
     background-color: var(--primary-color);
-    border-radius: 5vh;
+    border-radius: 1vh;
     position: relative;
 }
 
@@ -696,7 +684,7 @@ console.log(data.value);
 }
 
 .skills {
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-bottom: 2vh;
 }
 
@@ -771,6 +759,30 @@ console.log(data.value);
     text-align: center;
 }
 
+.container {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    height: 85vh;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1vh;
+}
+
+.active-skills {
+    grid-row-start: 1;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.knowledge-skills {
+    grid-row-start: 1;
+    grid-row-end: 8;
+    grid-column-start: 6;
+    grid-column-end: 11;
+}
 
 
 </style>

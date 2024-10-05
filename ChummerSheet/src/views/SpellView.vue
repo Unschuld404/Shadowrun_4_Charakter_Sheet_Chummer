@@ -21,7 +21,9 @@ onMounted(() => {
 
 <template>
 
-    <div class="spell-box">
+    <div class="container">
+
+<div class="spell-box">
 
         <div class="scroll-box">
 
@@ -350,23 +352,38 @@ onMounted(() => {
         <div class="lower-header">Spells</div>
     </div>
 
+    </div>
+
 </template>
 
 <style scoped>
 
     .spell-box {
-        width: 60%;
-        height: 80vh;
-        margin-top: 5vh;
+        background-color: var(--primary-color);
+        border-radius: 1vh;
+        position: relative;
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(10, 1fr);
+        height: 85vh;
+        max-width: 1280px;
         margin-left: auto;
         margin-right: auto;
-        background-color: var(--primary-color);
-        border-radius: 5vh;
-        position: relative;
-        padding-top: 3vh;
+        gap: 1vh;
+    }
+
+    .spell-box {
+        grid-row-start: 1;
+        grid-row-end: 8;
+        grid-column-start: 3;
+        grid-column-end: 9;
     }
 
     .scroll-box {
+        margin-top: 3vh;
         overflow: scroll;
         height: 90%;
     }

@@ -555,6 +555,7 @@ onMounted(() => {
         border: none;
         font-size: 3vh;
         margin-top: 4vh;
+        color: var(--background-color);
     }
 
     .use-edge:active {
@@ -630,7 +631,7 @@ onMounted(() => {
         display: grid;
         grid-template-rows: repeat(7, 1fr);
         grid-template-columns: repeat(10, 1fr);
-        height: 90vh;
+        height: 85vh;
         max-width: 1280px;
         margin-left: auto;
         margin-right: auto;
