@@ -23,14 +23,14 @@ onMounted(() => {
       <nav class="navbar">
         <ul>
 
+          <li><RouterLink to="vehicles" class="nav-link"><span class="material-symbols-outlined">
+          smart_toy
+          </span></RouterLink></li>
+          <li><RouterLink to="weapons" class="nav-link"><span class="material-symbols-outlined">
+          swords
+          </span></RouterLink></li>
           <li><RouterLink to="main" class="nav-link"><i class='bx bxs-home'></i></RouterLink></li>
           <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
-          <li><RouterLink to="weapons" class="nav-link"><span class="material-symbols-outlined">
-swords
-</span></RouterLink></li>
-          <li><RouterLink to="vehicles" class="nav-link"><span class="material-symbols-outlined">
-smart_toy
-</span></RouterLink></li>
           <li><RouterLink to="spells" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
           <li><RouterLink to="spirits" class="nav-link"><i class='bx bxs-ghost' ></i></RouterLink></li>
 

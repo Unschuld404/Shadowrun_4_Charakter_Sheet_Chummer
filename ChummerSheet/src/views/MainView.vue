@@ -49,333 +49,337 @@ onMounted(() => {
         </div>
     </div>
 
-    <div class="container">
+        <SwipeWrapper>
 
-        <div class="nuyen box">
+            <div class="container">
 
-        <div class="nuyen-amount">5600 ¥</div>
+                <div class="nuyen box">
 
-        <div class="box-name">Nuyen</div>
+                <div class="nuyen-amount">5600 ¥</div>
 
-        </div>  
+                <div class="box-name">Nuyen</div>
 
-        <div class="edge box">
+                </div>  
 
-        <div class="edge-dice">3</div>
-        <div class="box-name">Edge</div>
+                <div class="edge box">
 
-        </div>
-
-        <div class="initiative box">
-
-        <div class="initiatives">
-
-            <div class="initiative">
-
-                <div class="initiative-category">Normal</div>
-                <button class="pool">7</button>
-            
-            </div>
-
-            <div class="initiative">
-
-                <div class="initiative-category">Matrix</div>
-                <button class="pool">6</button>
-
-            </div>
-
-            <div class="initiative">
-
-                <div class="initiative-category">Astral</div>
-                <button class="pool">8</button>
-
-            </div>
-
-        </div>
-
-        <div class="box-name">Initiative</div>
-
-        </div>
-
-        <div class="resistance box">
-
-        <div class="resistances">
-
-            <div class="resistance">
-
-                <div class="resistance-category">Ballistisch</div>
-                <button class="pool">6</button>
-
-            </div>
-
-            <div class="resistance">
-
-                <div class="resistance-category">Stoß</div>
-                <button class="pool">8</button>
-
-            </div>
-
-            <div class="resistance">
-
-                <div class="resistance-category">Körperlich</div>
-                <button class="pool">4</button>
-
-            </div>
-
-            <div class="resistance">
-
-                <div class="resistance-category">Willenskraft</div>
-                <button class="pool">6</button>
-
-            </div>
-
-            <div class="resistance">
-
-                <div class="resistance-category">Entzug</div>
-                <button class="pool">6</button>
-
-            </div>
-
-        </div>
-
-        <div class="box-name">Widerstand</div>
-
-        </div>  
-
-        <div class="fav-skills-box box">
-
-        <div class="fav-skills">
-
-            <div class="fav-skill">
-
-                <div class="fav-skill-name">Assensing</div>
-                <div class="fav-skill-numbers">
-
-                    <div class="fav-skill-value">4 + INT 4</div>
-                    <button class="pool">8</button>
+                <div class="edge-dice">3</div>
+                <div class="box-name">Edge</div>
 
                 </div>
 
-            </div>
+                <div class="initiative box">
 
-            <div class="fav-skill">
+                <div class="initiatives">
 
-                <div class="fav-skill-name">Ausweichen</div>
-                <div class="fav-skill-numbers">
+                    <div class="initiative">
 
-                    <div class="fav-skill-value">1 + REA 3</div>
-                    <button class="pool">4</button>
+                        <div class="initiative-category">Normal</div>
+                        <button class="pool">7</button>
+                    
+                    </div>
 
-                </div>
+                    <div class="initiative">
 
-            </div>
+                        <div class="initiative-category">Matrix</div>
+                        <button class="pool">6</button>
 
-            <div class="fav-skill">
+                    </div>
 
-                <div class="fav-skill-name">Bannen</div>
-                <div class="fav-skill-numbers">
+                    <div class="initiative">
 
-                    <div class="fav-skill-value">4 + MAG 5</div>
-                    <button class="pool">9</button>
+                        <div class="initiative-category">Astral</div>
+                        <button class="pool">8</button>
 
-                </div>
-
-            </div>
-
-            <div class="fav-skill">
-
-                <div class="fav-skill-name">Binden</div>
-                <div class="fav-skill-numbers">
-
-                    <div class="fav-skill-value">4 + MAG 5</div>
-                    <button class="pool">9</button>
+                    </div>
 
                 </div>
 
-            </div>
-
-            <div class="fav-skill">
-
-                <div class="fav-skill-name">Beschwören</div>
-                <div class="fav-skill-numbers">
-
-                    <div class="fav-skill-value">4 + MAG 5</div>
-                    <button class="pool">9</button>
+                <div class="box-name">Initiative</div>
 
                 </div>
 
-            </div>
+                <div class="resistance box">
 
-            <div class="fav-skill">
+                <div class="resistances">
 
-                <div class="fav-skill-name">Etikette</div>
-                <div class="fav-skill-numbers">
+                    <div class="resistance">
 
-                    <div class="fav-skill-value">1 + CHA 5</div>
-                    <button class="pool">6</button>
+                        <div class="resistance-category">Ballistisch</div>
+                        <button class="pool">6</button>
 
-                </div>
-            </div>
+                    </div>
 
+                    <div class="resistance">
 
-            <div class="fav-skill">
+                        <div class="resistance-category">Stoß</div>
+                        <button class="pool">8</button>
 
-                <div class="fav-skill-name">Gegenzauber</div>
-                <div class="fav-skill-numbers">
+                    </div>
 
-                    <div class="fav-skill-value">4 + MAG 5</div>
-                    <button class="pool">9</button>
+                    <div class="resistance">
 
-                </div>
+                        <div class="resistance-category">Körperlich</div>
+                        <button class="pool">4</button>
 
-            </div>
+                    </div>
 
-            <div class="fav-skill">
+                    <div class="resistance">
 
-                <div class="fav-skill-name">Heimlichkeit</div>
-                <div class="fav-skill-numbers">
+                        <div class="resistance-category">Willenskraft</div>
+                        <button class="pool">6</button>
 
-                    <div class="fav-skill-value">1 + INT 4</div>
-                    <button class="pool">5</button>
+                    </div>
 
-                </div>
+                    <div class="resistance">
 
-            </div>
+                        <div class="resistance-category">Entzug</div>
+                        <button class="pool">6</button>
 
-            <div class="fav-skill">
-
-                <div class="fav-skill-name">Wahrnehmung</div>
-                <div class="fav-skill-numbers">
-
-                    <div class="fav-skill-value">2 + INT 4</div>
-                    <button class="pool">6</button>
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="box-name">Widerstand</div>
 
-            <div class="fav-skill">
+                </div>  
 
-                <div class="fav-skill-name">Zaubern</div>
-                <div class="fav-skill-numbers">
+                <div class="fav-skills-box box">
 
-                    <div class="fav-skill-value">4 + MAG 5</div>
-                    <button class="pool">9</button>
+                <div class="fav-skills">
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Assensing</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">4 + INT 4</div>
+                            <button class="pool">8</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Ausweichen</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">1 + REA 3</div>
+                            <button class="pool">4</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Bannen</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">4 + MAG 5</div>
+                            <button class="pool">9</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Binden</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">4 + MAG 5</div>
+                            <button class="pool">9</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Beschwören</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">4 + MAG 5</div>
+                            <button class="pool">9</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Etikette</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">1 + CHA 5</div>
+                            <button class="pool">6</button>
+
+                        </div>
+                    </div>
+
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Gegenzauber</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">4 + MAG 5</div>
+                            <button class="pool">9</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Heimlichkeit</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">1 + INT 4</div>
+                            <button class="pool">5</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Wahrnehmung</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">2 + INT 4</div>
+                            <button class="pool">6</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fav-skill">
+
+                        <div class="fav-skill-name">Zaubern</div>
+                        <div class="fav-skill-numbers">
+
+                            <div class="fav-skill-value">4 + MAG 5</div>
+                            <button class="pool">9</button>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="box-name">Fertigkeiten</div>
 
-        </div>
+                </div>
 
-        <div class="box-name">Fertigkeiten</div>
+                <div class="fav-actions box">
 
-        </div>
+                <div class="actions">
 
-        <div class="fav-actions box">
+                    <div class="action">
+                        
+                        <div class="action-name">Powerblitz</div>
+                        <div class="drain-formula">(F/2)+1</div>
 
-        <div class="actions">
+                    </div>
 
-            <div class="action">
+                    <div class="action">
+
+                        <div class="action-name">Betäubungsblitz</div>
+                        <div class="drain-formula">(F/2)-1</div>
+
+                    </div>
+
+                    <div class="action">
+
+                        <div class="action-name">Verbesserte Unsichtbarkeit</div>
+                        <div class="drain-formula">(F/2)+1</div>
+
+                    </div>
+
+                    <div class="action">
+
+                        <div class="action-name">Levitieren</div>
+                        <div class="drain-formula">(F/2)+1</div>
+
+                    </div>
+
+                    <div class="action">
+
+                        <div class="action-name">Formwandeln</div>
+                        <div class="drain-formula">(F/2)+2</div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="box-name">Specials</div>
+
+                </div>
+
+                <div class="body-condition box">
+
+                <div class="body-dmg">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
                 
-                <div class="action-name">Powerblitz</div>
-                <div class="drain-formula">(F/2)+1</div>
+                </div>
+
+                <div class="box-name">Körperlicher Zustand</div>
+
+                </div>
+
+                <div class="stun-condition box">
+
+                <div class="stun-dmg">
+
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+                    <input type="checkbox" class="dmg">
+
+                </div>
+
+                <div class="box-name">Geistiger Zustand</div>
+
+                </div>
+
+                <div class="mugshot box" @click="openModal">
+
+                <img src="/public/Kaya_Portrait.png" alt="Charakterportrait">
+
+                </div>
 
             </div>
 
-            <div class="action">
-
-                <div class="action-name">Betäubungsblitz</div>
-                <div class="drain-formula">(F/2)-1</div>
-
-            </div>
-
-            <div class="action">
-
-                <div class="action-name">Verbesserte Unsichtbarkeit</div>
-                <div class="drain-formula">(F/2)+1</div>
-
-            </div>
-
-            <div class="action">
-
-                <div class="action-name">Levitieren</div>
-                <div class="drain-formula">(F/2)+1</div>
-
-            </div>
-
-            <div class="action">
-
-                <div class="action-name">Formwandeln</div>
-                <div class="drain-formula">(F/2)+2</div>
-                
-            </div>
-
-        </div>
-
-        <div class="box-name">Specials</div>
-
-        </div>
-
-        <div class="body-condition box">
-
-        <div class="body-dmg">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-        
-        </div>
-
-        <div class="box-name">Körperlicher Zustand</div>
-
-        </div>
-
-        <div class="stun-condition box">
-
-        <div class="stun-dmg">
-
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-            <input type="checkbox" class="dmg">
-
-        </div>
-
-        <div class="box-name">Geistiger Zustand</div>
-
-        </div>
-
-        <div class="mugshot box" @click="openModal">
-
-        <img src="/public/Kaya_Portrait.png" alt="Charakterportrait">
-
-        </div>
-
-    </div>
+    </SwipeWrapper>
 
 </template>
 
