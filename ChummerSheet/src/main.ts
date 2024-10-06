@@ -11,6 +11,5 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-app.use(Vue2TouchEvents);
 
 app.mount('#app')

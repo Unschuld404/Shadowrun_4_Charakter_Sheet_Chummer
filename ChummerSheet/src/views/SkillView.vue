@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import { captureRejectionSymbol } from 'events';
-import { useCharacterData } from '../composables/useCharacterData';
-
-const { data } = useCharacterData('Kaya');  // Hier den ID der Charaktere verwenden
-
-console.log(data.value);
 
 </script>
 
