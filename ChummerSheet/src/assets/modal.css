@@ -1,0 +1,111 @@
+/* Modal */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    border-radius: 2vh;
+    width: 30vw;
+    height: 25vh;
+    border: 0.1vh solid var(--font-color);
+    z-index: 1001
+}
+
+.modify-pool {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 60%;
+    margin-top: 1vh;
+}
+
+.use-edge {
+    height: 8vh;
+    width: 8vh;
+    border: none;
+    font-size: 3vh;
+    margin-top: 4vh;
+    color: var(--background-color);
+}
+
+.use-edge:active {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.pool-modifyer {
+    border: none;
+    background-color:var(--secondary-color);
+    height: 7vh;
+    font-size: 8vh;
+    line-height: 7vh;
+    border-radius: 1vh;
+    color: var(--accent-color)
+}
+
+.pool-modifyer:active {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.dice {
+    width: 20vh;
+    text-align: center;
+    font-size: 10vh;
+    font-weight: bold;
+    color: var(--accent-color);
+    line-height: 15vh;
+    margin-top: 0.5vh;
+}
+
+.modifyer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 8vh;
+}
+
+.submit-roll {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    height: 30%;
+}
+
+.submit-roll button {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    border: 0.1vh solid var(--font-color);
+    font-size: 3vh;
+}
+
+.submit-roll button:active {
+    background-color: var(--font-color);
+    color: var(--background-color);
+}
+
+.escape {
+    border-radius: 0 0 0 2vh;
+    width: 30%;
+}
+
+.submit {
+    border-radius: 0 0 2vh 0;
+    width: 70%;
+}

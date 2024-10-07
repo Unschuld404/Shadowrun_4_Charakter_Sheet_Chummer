@@ -1,0 +1,43 @@
+.box {
+    background-color: var(--primary-color);
+    border-radius: 1vh;
+    position: relative;
+}
+
+.scroll-box {
+    overflow: scroll;
+    height: 90%;
+    margin-top: 3vh;
+}
+
+.flex-scroll {
+    overflow: scroll;
+    height: 95%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.lower-header {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border-bottom: 1px solid var(--background-color);
+    line-height: 6vh; /* totalValue height + 2vh for padding */
+}
+
+.formula {
+    width: 20%;
+    text-align: right;
+    font-weight: bold;
+    color: var(--accent-color);
+}

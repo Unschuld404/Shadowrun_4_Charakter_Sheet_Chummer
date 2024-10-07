@@ -5,7 +5,6 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
-import Vue2TouchEvents from 'vue2-touch-events';
 
 const app = createApp(App)
 

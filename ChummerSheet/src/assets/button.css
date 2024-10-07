@@ -1,0 +1,40 @@
+button:hover, .nuyen-amount, .edge-dice, .formula, .favourite, .add  {
+    cursor: pointer;
+}
+
+.total-value {
+    font-weight: bold;
+    font-size: 3vh;
+    border: none;
+    text-align: center;
+    border-radius: 0.5vh;
+    height: 4vh; /* reference for line-height */
+    width: 4vh;
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    margin-top: 1vh;
+}
+
+.total-value:active {
+    background-color: var(--font-color);
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.add {
+    background-color: var(--accent-color);
+    border-radius: 1vh;
+    color: var(--primary-color);
+    font-size: 6vh;
+    font-weight: bold;
+    text-align: center;
+    line-height: 6vh;
+    width: 8vh;
+}
+
+.add:active {
+    background-color: var(--background-color);
+}
