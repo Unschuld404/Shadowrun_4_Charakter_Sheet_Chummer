@@ -16,7 +16,7 @@ import KnowledgeSkills from "@/components/KnowledgeSkills.vue";
 
 .collection {
   display: flex;
-  gap: 2vh;
+  gap: 1vh;
 }
 
 .box {

@@ -12,93 +12,52 @@ import Specials from "@/components/Specials.vue";
 
 <template>
 
-            <div class="container">
+  <div class="collection">
 
-              <Edge/>
-
-              <Initiative/>
-
-              <MainSkills/>
-
-              <MainActions/>
-
-              <Nuyen/>
-
-              <PhysicalMonitor/>
-
-              <Resistance/>
-
-              <Specials/>
-
-              <StunMonitor/>
-
-            </div>
+    <div class="column">
+      <div class="row">
+        <Nuyen/>
+        <Edge/>
+        <Initiative/>
+      </div>
+      <Resistance/>
+      <Specials/>
+      <div class="row">
+        <PhysicalMonitor/>
+        <StunMonitor/>
+      </div>
+    </div>
+    <div class="column">
+      <MainSkills/>
+    </div>
+    <div class="column">
+      <MainActions/>
+    </div>
+  </div>
 
 </template>
 
 <style scoped>
 
-  .nuyen {
-      grid-row-start: 1;
-      grid-row-end: 2;
-      grid-column-start: 10;
-      grid-column-end: 11;
+  .collection {
+    display: flex;
+    gap: 1vh;
+  }
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: 1vh;
   }
 
-  .edge {
-      grid-row-start: 1;
-      grid-row-end: 2;
-      grid-column-start: 9;
-      grid-column-end: 10;
-  }
-
-  .main-initiative {
-      grid-row-start: 1;
-      grid-row-end: 2;
-      grid-column-start: 7;
-      grid-column-end: 9;
-  }
-
-  .main-resistance {
-      grid-row-start: 2;
-      grid-row-end: 3;
-      grid-column-start: 7;
-      grid-column-end: 11;
-  }
-
-  .main-skills {
-      grid-row-start: 1;
-      grid-row-end: 8;
-      grid-column-start: 1;
-      grid-column-end: 4;
-  }
-
-  .specials {
-    grid-row-start: 3;
-    grid-row-end: 5;
-    grid-column-start: 7;
-    grid-column-end: 11;
-  }
-
-  .body-condition {
-    grid-row-start: 5;
-    grid-row-end: 8;
-    grid-column-start: 7;
-    grid-column-end: 9;
-  }
-
-  .stun-condition {
-      grid-row-start: 5;
-      grid-row-end: 8;
-      grid-column-start: 9;
-      grid-column-end: 11;
-  }
-
-  .main-actions {
-      grid-row-start: 1;
-      grid-row-end: 8;
-      grid-column-start: 4;
-      grid-column-end: 7;
+  .box {
+    border: 1px solid var(--font-color);
   }
 
 </style>

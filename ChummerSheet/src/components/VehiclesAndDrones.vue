@@ -3,6 +3,7 @@
 </script>
 
 <template>
+
   <div class="box">
     <div class="name">Drohne</div>
     <div class="info">
@@ -33,31 +34,31 @@
 
 <style scoped>
 
-.box {
-  height: 15vh;
-  padding-top: 2vh;
-  padding-left: 4vh;
-  padding-right: 4vh;
-}
+  .box {
+    height: 15vh;
+    padding-top: 2vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+  }
 
-.name {
-  height: 5vh;
-  font-size: 3vh;
-  font-weight: bold;
-  color: var(--accent-color);
-  border-bottom: 1px solid var(--font-color);
-}
+  .name {
+    height: 5vh;
+    font-size: 3vh;
+    font-weight: bold;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--font-color);
+  }
 
-.info {
-  display: flex;
-  justify-content: space-between;
-}
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.value {
-  width: 10%;
-  text-align: center;
-  line-height: 9vh;
-  font-size: 2vh;
-}
+  .value {
+    width: 10%;
+    text-align: center;
+    line-height: 9vh;
+    font-size: 2vh;
+  }
 
 </style>/

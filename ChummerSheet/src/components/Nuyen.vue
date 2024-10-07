@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { useRollDialogue } from "@/Scripts/RollDialogue";
+import { useRollDialogue } from "@/Scripts/Dialogue";
 
 const { showModal, openModal, closeModal } = useRollDialogue();
 
@@ -8,7 +8,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
 
 <template>
 
-  <div class="nuyen box">
+  <div class="box">
 
     <div v-if="showModal" class="modal-overlay">
       <div class="modal-content">
@@ -38,8 +38,8 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
     </div>
 
-    <div class="nuyen-amount" @click="openModal">5600 ¥</div>
-    <div class="lower-header">Nuyen</div>
+    <div class="nuyen-amount" @click="openModal">5.600</div>
+    <div class="lower-header">¥</div>
 
   </div>
 
@@ -56,6 +56,9 @@ const { showModal, openModal, closeModal } = useRollDialogue();
   font-weight: bold;
   font-size: 3vh;
   color: var(--accent-color);
+}
+.box{
+  width: 15vh;
 }
 
 </style>

@@ -2,6 +2,7 @@
     background-color: var(--primary-color);
     border-radius: 1vh;
     position: relative;
+    border: 1px solid var(--font-color);
 }
 
 .scroll-box {

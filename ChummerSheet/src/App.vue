@@ -15,13 +15,9 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav class="navbar">
         <ul>
 
-          <li><RouterLink to="vehicles" class="nav-link"><span class="material-symbols-outlined">
-          smart_toy
-          </span></RouterLink></li>
-          <li><RouterLink to="weapons" class="nav-link"><span class="material-symbols-outlined">
-          swords
-          </span></RouterLink></li>
-          <li><RouterLink to="main" class="nav-link"><i class='bx bxs-home'></i></RouterLink></li>
+          <li><RouterLink to="vehicles" class="nav-link"><i class='bx bxs-car'></i></RouterLink></li>
+          <li><RouterLink to="weapons" class="nav-link"><i class='bx bx-knife'></i></RouterLink></li>
+          <li><RouterLink to="main" class="nav-link"><i class='bx bx-street-view'></i></RouterLink></li>
           <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
           <li><RouterLink to="spells" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
           <li><RouterLink to="spirits" class="nav-link"><i class='bx bxs-ghost' ></i></RouterLink></li>
@@ -70,20 +66,12 @@ import { RouterLink, RouterView } from 'vue-router'
   justify-content: space-around;
 }
 
-i:hover, span:hover {
-  color: var(--accent-color);
-}
-
 .nav-link {
   color: var(--font-color)
 }
 
 .router-link-active {
   color: var(--accent-color)
-}
-
-span {
-  font-size: 4vh;
 }
 
 </style>

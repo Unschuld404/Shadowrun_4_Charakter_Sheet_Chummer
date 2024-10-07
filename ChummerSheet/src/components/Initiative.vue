@@ -1,64 +1,26 @@
 <script setup lang="ts">
 
-import { useRollDialogue } from "@/Scripts/RollDialogue";
-
-const { showModal, openModal, closeModal } = useRollDialogue();
-
 </script>
 
 <template>
 
-  <div class="main-initiative box">
-
-    <div v-if="showModal" class="modal-overlay">
-      <div class="modal-content">
-
-        <div class="modify-pool">
-
-          <button class="use-edge">EDGE</button>
-
-          <div class="dice">00</div>
-
-          <div class="modifyer">
-
-            <button class="pool-modifyer">+</button>
-            <button class="pool-modifyer">-</button>
-
-          </div>
-
-        </div>
-
-        <div class="submit-roll">
-
-          <button class="escape" @click="closeModal">ZURÜCK</button>
-          <button class="submit">Los!</button>
-
-        </div>
-
-      </div>
-    </div>
+  <div class="box">
 
     <div class="initiatives">
 
       <div class="initiative">
-
         <div class="initiative-category">Normal</div>
-        <button class="total-value" @click="openModal">7</button>
-
+        <button class="total-value">7</button>
       </div>
 
       <div class="initiative">
-
         <div class="initiative-category">Matrix</div>
-        <button class="total-value" @click="openModal">6</button>
-
+        <button class="total-value">6</button>
       </div>
 
       <div class="initiative">
-
         <div class="initiative-category">Astral</div>
-        <button class="total-value" @click="openModal">8</button>
-
+        <button class="total-value">8</button>
       </div>
 
     </div>
@@ -74,13 +36,19 @@ const { showModal, openModal, closeModal } = useRollDialogue();
 .initiatives {
   display: flex;
   margin-top: 0.5vh;
+  justify-content: space-evenly;
 }
 
 .initiative {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 33.33%;
+  width: 30%;
+}
+
+.box {
+  height: 12vh;
+  width: 25vh;
 }
 
 </style>

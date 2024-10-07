@@ -16,43 +16,6 @@
   </div>
 
   <div class="box">
-    <div class="name">Beispielnahkampfwaffe</div>
-    <div class="info">
-      <input type="checkbox" class="favourite">
-      <div class="value">Reichweite</div>
-      <div class="value">Schaden</div>
-      <div class="value">PB</div>
-      <button class="total-value">00</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <div class="name">Beispielschusswaffe</div>
-    <div class="info">
-      <input type="checkbox" class="favourite">
-      <div class="value">Schaden</div>
-      <div class="value">PB</div>
-      <div class="value">Modus</div>
-      <div class="value">Rückstoß</div>
-      <div class="value">Munition</div>
-      <button class="total-value">00</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <div class="name">Beispielschusswaffe</div>
-    <div class="info">
-      <input type="checkbox" class="favourite">
-      <div class="value">Schaden</div>
-      <div class="value">PB</div>
-      <div class="value">Modus</div>
-      <div class="value">Rückstoß</div>
-      <div class="value">Munition</div>
-      <button class="total-value">00</button>
-    </div>
-  </div>
-
-  <div class="box">
     <div class="name">Beispielschusswaffe</div>
     <div class="info">
       <input type="checkbox" class="favourite">

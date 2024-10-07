@@ -1,14 +1,10 @@
 <script setup lang="ts">
 
-import { useRollDialogue } from "@/Scripts/RollDialogue";
-
-const { showModal, openModal, closeModal } = useRollDialogue();
-
 </script>
 
 <template>
 
-  <div class="specials box">
+  <div class="box">
 
     <div v-if="showModal" class="modal-overlay">
       <div class="modal-content">
@@ -39,36 +35,27 @@ const { showModal, openModal, closeModal } = useRollDialogue();
     </div>
 
     <div class="item">
-
       <div class="name">Kampfzauber</div>
       <div class="value">+ 2</div>
-
       <div class="button-box">
-        <button class="total-value" @click="openModal">11</button>
+        <button class="total-value">11</button>
       </div>
-
     </div>
 
     <div class="item">
-
       <div class="name">Tiergeister beschwören</div>
       <div class="value">+ 2</div>
-
       <div class="button-box">
-        <button class="total-value" @click="openModal">11</button>
+        <button class="total-value">11</button>
       </div>
-
     </div>
 
     <div class="item">
-
       <div class="name">Etwas anderes besonderes ...</div>
       <div class="value">+ 4</div>
-
       <div class="button-box">
-        <button class="total-value" @click="openModal">9</button>
+        <button class="total-value">9</button>
       </div>
-
     </div>
 
     <div class="lower-header">Boni</div>
@@ -79,16 +66,20 @@ const { showModal, openModal, closeModal } = useRollDialogue();
 
 <style scoped>
 
-.name {
-  width: 80%;
-}
+  .name {
+    width: 80%;
+  }
 
-.value {
-  width: 10%;
-}
+  .value {
+    width: 10%;
+  }
 
-.button-box {
-  width: 10%
-}
+  .button-box {
+    width: 10%
+  }
+
+  .box {
+    height: 22vh;
+  }
 
 </style>
