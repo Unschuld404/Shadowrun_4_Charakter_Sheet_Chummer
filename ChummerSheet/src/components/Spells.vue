@@ -7,10 +7,10 @@ const spells = computed(() => {
   return data.value ? getSpells() : [];
 });
 
-const spellcastingTotalValue = computed(() => {
+const spellcastingTotal = computed(() => {
   if (data.value && data.value.skills) {
-    const skill = data.value.skills.find((skill: any) => skill.name === 'Spellcasting');
-    return skill ? skill.totalvalue : 'N/A';
+    const skill = data.value.skills.find((skill: any) => skill.name === 'Spruchzauberei');
+    return skill ? skill.total : 'N/A';
   }
   return 'N/A';
 });
@@ -24,11 +24,11 @@ const spellcastingTotalValue = computed(() => {
         <div class="box">
           <div class="spell-header">
             <div class="name">{{ spell.name }}</div>
-            <button class="total-value">{{ spellcastingTotalValue }}</button>
+            <button class="total-value">{{ spellcastingTotal }}</button>
           </div>
           <div class="info">
             <input type="checkbox" class="favourite">
-            <div class="value">{{ spell.category }}</div>
+            <div class="category">{{ spell.category }}</div>
             <div class="value">{{ spell.type }}</div>
             <div class="value">{{ spell.range }}</div>
             <div class="value">{{ spell.duration }}</div>
@@ -77,8 +77,12 @@ const spellcastingTotalValue = computed(() => {
   }
 
   .value {
-    width: 20%;
+    width: 10%;
     text-align: center;
+  }
+
+  .category{
+    width: 40%;
   }
 
   .formula{

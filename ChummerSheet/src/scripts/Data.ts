@@ -5,16 +5,16 @@ const data = ref<any | null>(null);
 function getTotalValueByName(name: string): number | null {
     if (!data.value || !data.value.attributes) return null;
     const block = data.value.attributes.find((item: any) => item.name === name);
-    return block ? block.totalvalue : null;
+    return block ? block.total : null;
 }
 
 // Funktion, um die Skills nach dem Knowledge-Wert zu filtern
 function getSkills(knowledge: boolean): Array<{
     name: string;
     attribute: string;
-    attributeValue: number;
+    attributemod: number;
     rating: number;
-    totalValue: number;
+    total: number;
 }> {
     if (!data.value || !data.value.skills) return [];
 
@@ -23,9 +23,9 @@ function getSkills(knowledge: boolean): Array<{
         .map((skill: any) => ({
             name: skill.name || 'Unbekannt',
             attribute: skill.attribute || 'Unbekannt',
-            attributeValue: skill['attribute-value'] || 0,
+            attributemod: skill.attributemod || 0,
             rating: skill.rating || 0,
-            totalValue: skill.totalvalue || 0
+            total: skill.total || 0
         }));
 }
 
