@@ -8,7 +8,9 @@
 .scroll-box {
     overflow: scroll;
     height: 90%;
-    margin-top: 3vh;
+    margin-top: 3vh;  -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
 }
 
 .flex-scroll {
@@ -18,6 +20,16 @@
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-box::-webkit-scrollbar {
+    display: none;
+}
+
+.flex-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .lower-header {
