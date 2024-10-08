@@ -183,20 +183,12 @@
 
 <style scoped>
 
-.checkbox-box {
-  width: 8%;
-}
+  .item {
+    justify-content: space-between;
+  }
 
-.name {
-  width: 64%;
-}
-
-.value {
-  width: 20%;
-}
-
-.button-box {
-  width: 8%;
-}
+  .name {
+    width: 50%;
+  }
 
 </style>

@@ -14,15 +14,13 @@ import KnowledgeSkills from "@/components/KnowledgeSkills.vue";
 
 <style scoped>
 
-.collection {
-  display: flex;
-  gap: 1vh;
-}
+  .collection {
+    display: flex;
+    gap: 1vh;
+  }
 
-.box {
-  width: 100%;
-  padding-left: 2vh;
-  padding-right: 2vh;
-}
+  .box {
+    width: 100%;
+  }
 
 </style>

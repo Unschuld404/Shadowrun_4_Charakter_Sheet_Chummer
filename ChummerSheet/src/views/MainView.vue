@@ -15,24 +15,32 @@ import Specials from "@/components/Specials.vue";
   <div class="collection">
 
     <div class="column">
+
       <div class="row">
         <Nuyen/>
         <Edge/>
         <Initiative/>
       </div>
+
       <Resistance/>
+
       <Specials/>
+
       <div class="row">
         <PhysicalMonitor/>
         <StunMonitor/>
       </div>
+
     </div>
+
     <div class="column">
       <MainSkills/>
     </div>
+
     <div class="column">
       <MainActions/>
     </div>
+
   </div>
 
 </template>
@@ -54,10 +62,6 @@ import Specials from "@/components/Specials.vue";
     flex-direction: row;
     justify-content: stretch;
     gap: 1vh;
-  }
-
-  .box {
-    border: 1px solid var(--font-color);
   }
 
 </style>

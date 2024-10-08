@@ -2,8 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MainView from '@/views/MainView.vue'
 import SkillView from '@/views/SkillView.vue'
 import WeaponView from '@/views/WeaponView.vue'
-import SpellView from '@/views/SpellView.vue'
-import SpiritView from '@/views/SpiritView.vue'
+import SpellView from '@/views/MagicView.vue'
 import VehicleView from '@/views/VehicleView.vue'
 
 const router = createRouter({
@@ -38,11 +37,6 @@ const router = createRouter({
       path: '/vehicles',
       name: 'vehicles',
       component: VehicleView
-    },
-    {
-      path: '/spirits',
-      name: 'spirits',
-      component: SpiritView
     },
   ]
 })

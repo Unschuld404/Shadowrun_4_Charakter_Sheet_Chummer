@@ -41,7 +41,6 @@ const { showModal, openModal, closeModal } = useRollDialogue();
   <!-- Dialogue for Dice Rolls -->
   <div v-if="showModal" class="modal-overlay">
     <div class="modal-content">
-      <i class='bx bx-x close' @click="closeModal"></i>
       <div class="dice-roll">
         <div class="boost">EDGE</div>
         <div class="dice-pool">00</div>
@@ -50,7 +49,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
           <i class='bx bx-chevron-down mod' ></i>
         </div>
       </div>
-      <button class="confirm">ROLL</button>
+      <button class="confirm" @click="closeModal"><i class='bx bxs-chevron-down'></i></button>
     </div>
   </div>
 

@@ -20,7 +20,7 @@
     background-color: var(--primary-color);
     border-radius: 1vh;
     width: 30vw;
-    height: 35vh;
+    height: 30vh;
     border: 0.1vh solid var(--font-color);
     z-index: 1001;
     padding-top: 1vh;
@@ -34,22 +34,11 @@
     background-color: var(--primary-color);
     border-radius: 1vh;
     width: 30vw;
-    height: 65vh;
+    height: 60vh;
     border: 0.1vh solid var(--font-color);
     z-index: 1001;
     padding-top: 1vh;
     position: relative;
-}
-
-.close {
-    color: var(--background-color);
-    font-size: 4vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
-}
-
-.close:active {
-    color: var(--font-color);
 }
 
 .dice-roll {
@@ -106,6 +95,10 @@
     color: var(--font-color);
 }
 
+.spirit-type {
+    color: blue;
+}
+
 .spirit-power {
     font-size: 4vh;
     font-weight: bold;
@@ -115,17 +108,4 @@
     width: 10vh;
     line-height: 10vh;
     text-align: center;
-}
-
-.spirit-resistance {
-    border: none;
-    width: 100%;
-    height: 5vh;
-    font-size: 4vh;
-    font-weight: bold;
-}
-
-.spirit-resistance:active {
-    background-color: var(--background-color);
-    color: var(--font-color);
 }

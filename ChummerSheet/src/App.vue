@@ -7,9 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <header class="header">
 
       <div class="name">
-
-        <div class="name-name">Kaya</div>
-
+        <div>Chummer</div>
       </div>
 
       <nav class="navbar">
@@ -20,7 +18,6 @@ import { RouterLink, RouterView } from 'vue-router'
           <li><RouterLink to="main" class="nav-link"><i class='bx bx-street-view'></i></RouterLink></li>
           <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
           <li><RouterLink to="spells" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
-          <li><RouterLink to="spirits" class="nav-link"><i class='bx bxs-ghost' ></i></RouterLink></li>
 
         </ul>
       </nav>
@@ -49,14 +46,14 @@ import { RouterLink, RouterView } from 'vue-router'
       width: 30%;
       }
 
-.navbar {
-  width: 30%;
-  align-items: center;
-}
-
 .karma {
   width: 30%;
   text-align: right;
+}
+
+.navbar {
+  width: 30%;
+  align-items: center;
 }
 
 .navbar ul {
