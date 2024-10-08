@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
 import { onMounted } from 'vue';
-import {fetchData} from "@/scripts/Fetch";
+import { fetchData } from "@/scripts/Fetch";
 import { data } from "@/scripts/Data";
+import { useSwipe } from "@/scripts/Swipe";
+
+const { nextView, previousView } = useSwipe();
 
 onMounted(() => {
   fetchData();
@@ -12,27 +15,29 @@ onMounted(() => {
 
 <template>
    
-    <header class="header">
+  <header class="header">
 
-      <div class="name">
-        <div v-if="data">{{ data.name }}</div>
-      </div>
+    <div class="name">
+      <div v-if="data">{{ data.name }}</div>
+    </div>
 
-      <nav class="navbar">
-        <ul>
-          <li><RouterLink to="vehicles" class="nav-link"><i class='bx bxs-invader'></i></RouterLink></li>
-          <li><RouterLink to="weapons" class="nav-link"><i class='bx bxs-backpack'></i></RouterLink></li>
-          <li><RouterLink to="main" class="nav-link"><i class='bx bx-street-view'></i></RouterLink></li>
-          <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
-          <li><RouterLink to="spells" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
-        </ul>
-      </nav>
+    <nav class="navbar">
+      <ul>
+        <li><RouterLink to="vehicles" class="nav-link"><i class='bx bxs-invader'></i></RouterLink></li>
+        <li><RouterLink to="weapons" class="nav-link"><i class='bx bxs-backpack'></i></RouterLink></li>
+        <li><RouterLink to="main" class="nav-link"><i class='bx bx-street-view'></i></RouterLink></li>
+        <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
+        <li><RouterLink to="spells" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
+      </ul>
+    </nav>
 
-      <div class="karma">4 Karma</div>
+    <div class="karma">4 Karma</div>
 
-    </header>
+  </header>
 
+  <div v-touch:swipeleft="nextView" v-touch:swiperight="previousView">
     <RouterView />
+  </div>
 
 </template>
 
