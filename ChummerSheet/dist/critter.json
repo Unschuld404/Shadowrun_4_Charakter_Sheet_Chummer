@@ -1,0 +1,330 @@
+{
+  "spirits": [
+    {
+      "type": "Erdgeist",
+      "attributes": {
+        "K": "K+4",
+        "G": "K-2",
+        "R": "K+2",
+        "S": "K+4",
+        "I": "K",
+        "L": "K",
+        "W": "K",
+        "EDG": "K",
+        "ESS": "K",
+        "M": "K",
+        "INI": "(Kx2)+2",
+        "ID": 2
+      },
+      "astral_initiative": {
+        "value": "Kx2",
+        "passes": 3
+      },
+      "movement": "10/25",
+      "skills": [
+        "Askennen",
+        "Astralkampf",
+        "Ausweichen",
+        "Exotische Fernkampfwaffe",
+        "Waffenloser Kampf",
+        "Wahrnehmung"
+      ],
+      "powers": [
+        "Astrale Gestalt",
+        "Bewegung",
+        "Bewusstsein",
+        "Bindung",
+        "Materialisierung",
+        "Schutz",
+        "Suche"
+      ],
+      "optional_powers": [
+        "Elementarer Angriff",
+        "Grauen",
+        "Verschleierung",
+        "Verschlingen",
+        "Verwirrung"
+      ]
+    },
+    {
+      "type": "Feuergeist",
+      "attributes": {
+        "K": "K+1",
+        "G": "K+2",
+        "R": "K+3",
+        "S": "K-2",
+        "I": "K",
+        "L": "K",
+        "W": "K",
+        "EDG": "K",
+        "ESS": "K",
+        "M": "K",
+        "INI": "(Kx2)+3",
+        "ID": 2
+      },
+      "astral_initiative": {
+        "value": "Kx2",
+        "passes": 3
+      },
+      "movement": "15/40 (fliegend)",
+      "skills": [
+        "Askennen",
+        "Astralkampf",
+        "Ausweichen",
+        "Exotische Fernkampfwaffe",
+        "Fliegen",
+        "Waffenloser Kampf",
+        "Wahrnehmung"
+      ],
+      "powers": [
+        "Astrale Gestalt",
+        "Bewusstsein",
+        "Elementarer Angriff",
+        "Energieaura",
+        "Materialisierung",
+        "Unfall",
+        "Verschlingen",
+        "Verwirrung"
+      ],
+      "optional_powers": [
+        "Grauen",
+        "Schutz",
+        "Suche",
+        "Übler Atem"
+      ],
+      "weaknesses": [
+        "Allergie (Wasser, Schwer)"
+      ]
+    },
+    {
+      "type": "Luftgeist",
+      "attributes": {
+        "K": "K-2",
+        "G": "K+3",
+        "R": "K+4",
+        "S": "K-3",
+        "I": "K",
+        "L": "K",
+        "W": "K",
+        "EDG": "K",
+        "ESS": "K",
+        "M": "K",
+        "INI": "(Kx2)+4",
+        "ID": 2
+      },
+      "astral_initiative": {
+        "value": "Kx2",
+        "passes": 3
+      },
+      "movement": "15/75 (fliegend)",
+      "skills": [
+        "Askennen",
+        "Astralkampf",
+        "Ausweichen",
+        "Exotische Fernkampfwaffe",
+        "Fliegen",
+        "Waffenloser Kampf",
+        "Wahrnehmung"
+      ],
+      "powers": [
+        "Astrale Gestalt",
+        "Bewegung",
+        "Bewusstsein",
+        "Materialisierung",
+        "Suche",
+        "Unfall",
+        "Verschleierung",
+        "Verschlingen",
+        "Verwirrung"
+      ],
+      "optional_powers": [
+        "Elementarer Angriff",
+        "Energieaura",
+        "Grauen",
+        "Psychokinese",
+        "Schutz",
+        "Übler Atem"
+      ]
+    },
+    {
+      "type": "Geist des Menschen",
+      "attributes": {
+        "K": "K+1",
+        "G": "K",
+        "R": "K+2",
+        "S": "K-2",
+        "I": "K",
+        "L": "K",
+        "W": "K",
+        "EDG": "K",
+        "ESS": "K",
+        "M": "K",
+        "INI": "(Kx2)+2",
+        "ID": 2
+      },
+      "astral_initiative": {
+        "value": "Kx2",
+        "passes": 3
+      },
+      "movement": "10/25",
+      "skills": [
+        "Askennen",
+        "Astralkampf",
+        "Ausweichen",
+        "Spruchzauberei",
+        "Waffenloser Kampf",
+        "Wahrnehmung"
+      ],
+      "powers": [
+        "Astrale Gestalt",
+        "Bewusstsein",
+        "Einfluss",
+        "Gesteigerte Sinne (Infrarotsicht, Restlichtverstärkung)",
+        "Schutz",
+        "Suche",
+        "Unfall",
+        "Materialisierung",
+        "Verschleierung",
+        "Verwirrung"
+      ],
+      "optional_powers": [
+        "Bewegung",
+        "Grauen",
+        "Natürlicher Zauberspruch (ein dem Beschwörer bekannter Zauber, maximale Kraftstufe = Kraft des Geists)",
+        "Psychokinese"
+      ]
+    },
+    {
+      "type": "Geist des Tieres",
+      "attributes": {
+        "K": "K+2",
+        "G": "K+1",
+        "R": "K+2",
+        "S": "K+2",
+        "I": "K",
+        "L": "K",
+        "W": "K",
+        "EDG": "K",
+        "ESS": "K",
+        "M": "K",
+        "INI": "(Kx2)+2",
+        "ID": 2
+      },
+      "astral_initiative": {
+        "value": "Kx2",
+        "passes": 3
+      },
+      "movement": "10/45",
+      "skills": [
+        "Askennen",
+        "Astralkampf",
+        "Ausweichen",
+        "Waffenloser Kampf",
+        "Wahrnehmung"
+      ],
+      "powers": [
+        "Astrale Gestalt",
+        "Bewegung",
+        "Bewusstsein",
+        "Gesteigerte Sinne (Gehör, Geruch, Restlichtverstärker)",
+        "Grauen",
+        "Materialisierung",
+        "Tierbeherrschung"
+      ],
+      "optional_powers": [
+        "Gift",
+        "Natürliche Waffe (Schaden = (Kraft) K, PB 0)",
+        "Verschleierung",
+        "Verwirrung",
+        "Schutz",
+        "Suche",
+        "Übler Atem"
+      ]
+    },
+    {
+      "type": "Wassergeist",
+      "attributes": {
+        "K": "K+2",
+        "G": "K",
+        "R": "K+2",
+        "S": "K",
+        "I": "K",
+        "L": "K",
+        "W": "K",
+        "EDG": "K",
+        "ESS": "K",
+        "M": "K",
+        "INI": "(Kx2)+2",
+        "ID": 2
+      },
+      "astral_initiative": {
+        "value": "Kx2",
+        "passes": 3
+      },
+      "movement": "10/25 (30/75 schwimmend)",
+      "skills": [
+        "Askennen",
+        "Astralkampf",
+        "Ausweichen",
+        "Exotische Fernkampfwaffe",
+        "Waffenloser Kampf",
+        "Wahrnehmung"
+      ],
+      "powers": [
+        "Astrale Gestalt",
+        "Bewegung",
+        "Bewusstsein",
+        "Materialisierung",
+        "Suche",
+        "Verschleierung",
+        "Verschlingen",
+        "Verwirrung"
+      ],
+      "optional_powers": [
+        "Bindung",
+        "Elementarer Angriff",
+        "Energieaura",
+        "Schutz",
+        "Unfall",
+        "Wetterbeherrschung"
+      ],
+      "weaknesses": [
+        "Allergie (Feuer, Schwer)"
+      ]
+    },
+    {
+      "type": "Watcher",
+      "attributes": {
+        "K": 1,
+        "G": 1,
+        "R": 1,
+        "S": 1,
+        "I": 1,
+        "L": 1,
+        "W": 1,
+        "EDG": 1,
+        "ESS": 1,
+        "M": 1,
+        "INI": 3,
+        "ID": 2
+      },
+      "astral_initiative": {
+        "value": 3,
+        "passes": 1
+      },
+      "skills": [
+        "Askennen 1",
+        "Astralkampf 1",
+        "Ausweichen 1"
+      ],
+      "powers": [
+        "Astrale Gestalt",
+        "Suche"
+      ],
+      "notes": [
+        "Watcher existieren nur auf der Astralebene (obwohl sie sich auf der physischen Ebene manifestieren können)",
+        "Ihre Kraftstufe beträgt immer 1"
+      ]
+    }
+  ]
+}
