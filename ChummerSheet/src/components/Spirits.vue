@@ -1,25 +1,28 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { data, getSpirits } from '@/scripts/Data';
 
+// Computed Property, das sich automatisch aktualisiert, wenn data sich ändert
+const spirits = computed(() => {
+  return data.value ? getSpirits() : [];
+});
 </script>
 
 <template>
 
-  <div class="box">
-    <div class="name">Beispielgeist</div>
-    <div class="info">
-      <div class="value">Kraft</div>
-      <div class="value">Dienste</div>
-      <div class="value">gebunden</div>
-    </div>
-  </div>
-
-  <div class="box">
-    <div class="name">Beispielgeist</div>
-    <div class="info">
-      <div class="value">Kraft</div>
-      <div class="value">Dienste</div>
-      <div class="value">gebunden</div>
-    </div>
+  <div v-if="spirits.length">
+    <ul>
+      <li v-for="(spirit, index) in spirits" :key="index">
+        <div class="box">
+          <div class="name">{{ spirit.crittername }}</div>
+          <div class="info">
+            <div class="value">Kraft: {{ spirit.force }}</div>
+            <div class="value">Dienste: {{ spirit.services }}</div>
+            <div class="value">{{ spirit.bound ? 'Gebunden' : 'Frei' }}</div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 
   <button><i class='bx bxs-ghost'></i></button>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { useRollDialogue } from "@/scripts/Dialogue";
-import { data } from "@/scripts/Data";
+import {data, getTotalValueByName} from "@/scripts/Data";
 
 const { showModal, openModal, closeModal } = useRollDialogue();
 

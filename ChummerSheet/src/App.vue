@@ -20,9 +20,8 @@ onMounted(() => {
 
       <nav class="navbar">
         <ul>
-
-          <li><RouterLink to="vehicles" class="nav-link"><i class='bx bxs-car'></i></RouterLink></li>
-          <li><RouterLink to="weapons" class="nav-link"><i class='bx bx-knife'></i></RouterLink></li>
+          <li><RouterLink to="vehicles" class="nav-link"><i class='bx bxs-invader'></i></RouterLink></li>
+          <li><RouterLink to="weapons" class="nav-link"><i class='bx bxs-backpack'></i></RouterLink></li>
           <li><RouterLink to="main" class="nav-link"><i class='bx bx-street-view'></i></RouterLink></li>
           <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
           <li><RouterLink to="spells" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
