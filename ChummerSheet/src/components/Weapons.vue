@@ -5,7 +5,7 @@
 <template>
 
   <div class="box">
-    <div class="name">Beispielnahkampfwaffe</div>
+    <div class="name">Beispielwaffe</div>
     <div class="info">
       <input type="checkbox" class="favourite">
       <div class="value">Reichweite</div>

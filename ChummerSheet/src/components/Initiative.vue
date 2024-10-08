@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+import { data, getTotalValueByName } from '@/scripts/Data';
+
 </script>
 
 <template>
@@ -10,17 +12,17 @@
 
       <div class="initiative">
         <div class="initiative-category">Normal</div>
-        <button class="total-value">7</button>
+        <button class="total-value" v-if="data">{{ +getTotalValueByName('INT') + +getTotalValueByName('REA') }}</button>
       </div>
 
       <div class="initiative">
         <div class="initiative-category">Matrix</div>
-        <button class="total-value">6</button>
+        <button class="total-value">6</button> <!-- hier ist es vom Kommlink abhängig -->
       </div>
 
       <div class="initiative">
         <div class="initiative-category">Astral</div>
-        <button class="total-value">8</button>
+        <button class="total-value" v-if="data">{{ getTotalValueByName('INT')*2 }}</button>
       </div>
 
     </div>

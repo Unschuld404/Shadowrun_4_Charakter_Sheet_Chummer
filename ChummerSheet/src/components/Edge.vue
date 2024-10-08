@@ -1,12 +1,14 @@
 <script setup lang="ts">
 
+import { data, getTotalValueByName } from '@/scripts/Data';
+
 </script>
 
 <template>
 
   <div class="box">
 
-    <div class="edge-dice">3</div>
+    <div v-if="data" class="edge-dice">{{ getTotalValueByName('EDG') }}</div>
     <div class="lower-header">Edge</div>
 
   </div>

@@ -12,43 +12,6 @@
       <div class="value">Reichweite</div>
       <div class="value">Dauer</div>
       <div class="formula">formula</div>
-      <button class="total-value">00</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <div class="name">Beispielzauber, langer Name</div>
-    <div class="info">
-      <input type="checkbox" class="favourite">
-      <div class="value">Art</div>
-      <div class="value">Reichweite</div>
-      <div class="value">Dauer</div>
-      <div class="formula">formula</div>
-      <button class="total-value">00</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <div class="name">Beispielzauber, langer Name</div>
-    <div class="info">
-      <input type="checkbox" class="favourite">
-      <div class="value">Art</div>
-      <div class="value">Reichweite</div>
-      <div class="value">Dauer</div>
-      <div class="formula">formula</div>
-      <button class="total-value">00</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <div class="name">Beispielzauber, langer Name</div>
-    <div class="info">
-      <input type="checkbox" class="favourite">
-      <div class="value">Art</div>
-      <div class="value">Reichweite</div>
-      <div class="value">Dauer</div>
-      <div class="formula">formula</div>
-      <button class="total-value">00</button>
     </div>
   </div>
 

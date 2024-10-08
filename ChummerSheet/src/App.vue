@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router';
+import { onMounted } from 'vue';
+import {fetchData} from "@/scripts/Fetch";
+import { data } from "@/scripts/Data";
+
+onMounted(() => {
+  fetchData();
+});
+
 </script>
 
 <template>
@@ -7,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <header class="header">
 
       <div class="name">
-        <div>Chummer</div>
+        <div v-if="data">{{ data.name }}</div>
       </div>
 
       <nav class="navbar">
@@ -18,7 +26,6 @@ import { RouterLink, RouterView } from 'vue-router'
           <li><RouterLink to="main" class="nav-link"><i class='bx bx-street-view'></i></RouterLink></li>
           <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
           <li><RouterLink to="spells" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
-
         </ul>
       </nav>
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
-import { useRollDialogue } from "@/Scripts/Dialogue";
+import { useRollDialogue } from "@/scripts/Dialogue";
+import { data } from "@/scripts/Data";
 
 const { showModal, openModal, closeModal } = useRollDialogue();
 
@@ -38,7 +39,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
     </div>
 
-    <div class="nuyen-amount" @click="openModal">5.600</div>
+    <div v-if="data" class="nuyen-amount" @click="openModal">{{ data.nuyen }}</div>
     <div class="lower-header">¥</div>
 
   </div>

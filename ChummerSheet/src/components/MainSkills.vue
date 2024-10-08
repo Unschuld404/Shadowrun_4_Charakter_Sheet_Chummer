@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { useRollDialogue } from "@/Scripts/Dialogue";
+import { useRollDialogue } from "@/scripts/Dialogue";
 
 const { showModal, openModal, closeModal } = useRollDialogue();
 
