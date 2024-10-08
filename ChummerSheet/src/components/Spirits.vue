@@ -64,6 +64,7 @@ const spirits = computed(() => {
     font-size: 5vh;
     line-height: 8vh;
     height: 7vh;
+    color: var(--background-color);
   }
 
   button:active {
