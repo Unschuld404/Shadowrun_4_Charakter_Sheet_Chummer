@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import VehiclesAndDrones from "@/components/VehiclesAndDrones.vue";
+import FahrzeugeUndDrohnen from "@/components/FahrzeugeUndDrohnen.vue";
 
 import { useRouter } from "vue-router";
+
 
 const router = useRouter();
 
 const navigateLeft = () => {
-  router.push({ name: 'weapons' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+  router.push({ name: 'Waffen' });
 };
 
 </script>
@@ -17,7 +18,7 @@ const navigateLeft = () => {
 
     <div class="collection">
       <div class="flex-scroll">
-        <VehiclesAndDrones/>
+        <FahrzeugeUndDrohnen/>
       </div>
     </div>
 

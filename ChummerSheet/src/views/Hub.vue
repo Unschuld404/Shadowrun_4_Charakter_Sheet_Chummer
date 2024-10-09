@@ -1,24 +1,26 @@
 <script setup lang="ts">
 import Edge from "@/components/Edge.vue";
 import Initiative from "@/components/Initiative.vue";
-import MainActions from "@/components/FavouriteActions.vue";
-import MainSkills from "@/components/FavouriteSkills.vue";
+import FavFertigkeiten from "@/components/FavFertigkeiten.vue";
+import FavAktionen from "@/components/FavAktionen.vue";
 import Nuyen from "@/components/Nuyen.vue";
-import PhysicalMonitor from "@/components/PhysicalMonitor.vue";
-import Resistance from "@/components/Resistance.vue";
-import StunMonitor from "@/components/StunMonitor.vue";
+import KoerperlicherSchadensmonitor from "@/components/KoerperlicherSchadensmonitor.vue";
+import GeistigerSchadensmonitor from "@/components/GeistigerSchadensmonitor.vue";
 import Specials from "@/components/Specials.vue";
+import Widerstand from "@/components/Widerstand.vue";
 
 import { useRouter } from "vue-router";
+
+
 
 const router = useRouter();
 
 const navigateLeft = () => {
-  router.push({ name: 'skills' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+  router.push({ name: 'Fertigkeiten' });
 };
 
 const navigateRight = () => {
-  router.push({ name: 'weapons' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+  router.push({ name: 'Waffen' });
 };
 
 </script>
@@ -38,23 +40,23 @@ const navigateRight = () => {
           <Initiative/>
         </div>
 
-        <Resistance/>
+        <Widerstand/>
 
         <Specials/>
 
         <div class="row">
-          <PhysicalMonitor/>
-          <StunMonitor/>
+          <KoerperlicherSchadensmonitor/>
+          <GeistigerSchadensmonitor/>
         </div>
 
       </div>
 
       <div class="column">
-        <MainSkills/>
+        <FavFertigkeiten/>
       </div>
 
       <div class="column">
-        <MainActions/>
+        <FavAktionen/>
       </div>
 
     </div>

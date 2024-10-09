@@ -18,23 +18,23 @@ const spellcastingTotal = computed(() => {
 
 <template>
 
-  <div class="spells-list">
+  <div class="scroll-box">
     <ul>
       <li v-for="(spell, index) in spells" :key="index">
-        <div class="box">
-          <div class="spell-header">
-            <div v-if="data" class="name">{{ spell.name }}</div>
-            <button v-if="data" class="total-value">{{ spellcastingTotal }}</button>
-          </div>
-          <div class="info">
-            <input type="checkbox" class="favourite">
-            <div v-if="data" class="category">{{ spell.category }}</div>
-            <div v-if="data" class="value">{{ spell.type }}</div>
-            <div v-if="data" class="value">{{ spell.range }}</div>
-            <div v-if="data" class="value">{{ spell.duration }}</div>
-            <div v-if="data" class="formula">{{ spell.dv }}</div>
-          </div>
-        </div>
+       <div class="item">
+         <div class="spell-header">
+           <div v-if="data" class="name">{{ spell.name }}</div>
+         </div>
+         <div class="info">
+           <input type="checkbox" class="favourite">
+           <div v-if="data" class="category">{{ spell.category }}</div>
+           <div v-if="data" class="value">{{ spell.type }}</div>
+           <div v-if="data" class="value">{{ spell.range }}</div>
+           <div v-if="data" class="value">{{ spell.duration }}</div>
+           <div v-if="data" class="formula">{{ spell.dv }}</div>
+           <button v-if="data" class="total-value">{{ spellcastingTotal }}</button>
+         </div>
+       </div>
       </li>
     </ul>
   </div>
@@ -43,22 +43,14 @@ const spellcastingTotal = computed(() => {
 
 <style scoped>
 
-  .box {
-    height: 15vh;
-    padding-top: 2vh;
-    padding-left: 4vh;
-    padding-right: 4vh;
-    margin-bottom: 2vh;
+  .item {
+    display: flex;
+    flex-direction: column;
   }
 
   .spell-header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid var(--font-color);
-  }
-
-  button {
-    margin-top: -0.3vh;
   }
 
   .name {
@@ -70,10 +62,13 @@ const spellcastingTotal = computed(() => {
 
   .info {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     text-align: center;
-    margin-top: 3vh;
-    height:8vh;
+    margin-top: 1vh;
+    line-height: 2vh;
+    height:4vh;
+    border-bottom: 1px solid var(--font-color);
+    position: relative;
   }
 
   .value {
@@ -86,7 +81,15 @@ const spellcastingTotal = computed(() => {
   }
 
   .formula{
-    width: 20%
+    width: 20%;
+    padding-right: 8vh;
+    text-align: right;
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 1vh;
   }
 
 </style>/

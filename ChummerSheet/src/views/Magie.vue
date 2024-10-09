@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import Spells from "@/components/Spells.vue";
-import Spirits from "@/components/Spirits.vue";
+import Zauber from "@/components/Zauber.vue";
+import Geister from "@/components/Geister.vue";
 
 import { useRouter } from "vue-router";
 
 const router = useRouter();
 
 const navigateRight = () => {
-  router.push({ name: 'skills' });
+  router.push({ name: 'Fertigkeiten' });
 };
 
 </script>
@@ -17,12 +17,12 @@ const navigateRight = () => {
   <div v-touch:swipe.right="navigateRight">
 
     <div class="collection">
-      <div class="flex-scroll spells">
-        <Spells />
+      <div class="box spells">
+        <Zauber />
       </div>
 
       <div class="flex-scroll spirits">
-        <Spirits />
+        <Geister />
       </div>
     </div>
 

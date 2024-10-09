@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import ActionSkills from "@/components/ActionSkills.vue";
-import KnowledgeSkills from "@/components/KnowledgeSkills.vue";
+import AktionsFertigkeiten from "@/components/AktionsFertigkeiten.vue";
+import Wissensfertigkeiten from "@/components/Wissensfertigkeiten.vue";
 
 import { useRouter } from "vue-router";
+
 
 const router = useRouter();
 
 const navigateLeft = () => {
-  router.push({ name: 'magic' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+  router.push({ name: 'Magie' });
 };
 
 const navigateRight = () => {
-  router.push({ name: 'main' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+  router.push({ name: 'Hub' });
 };
 
 </script>
@@ -23,8 +24,8 @@ const navigateRight = () => {
        v-touch:swipe.right="navigateRight">
 
     <div class="collection">
-      <ActionSkills />
-      <KnowledgeSkills />
+      <AktionsFertigkeiten />
+      <Wissensfertigkeiten />
     </div>
 
   </div>

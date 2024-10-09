@@ -29,7 +29,7 @@ function getSkills(knowledge: boolean): Array<{
         }));
 }
 
-// Funktion, um alle Spells zurückzugeben
+// Funktion, um alle Zauber zurückzugeben
 function getSpells(): Array<{
     name: string;
     category: string;
@@ -69,4 +69,31 @@ function getSpirits(): Array<{
     }];
 }
 
-export { data, getTotalValueByName, getSkills, getSpells, getSpirits };
+// Funktion, um alle Fahrzeuge zurückzugeben
+function getVehicles(): Array<{
+    name: string;
+    handling: string;
+    accel: string;
+    speed: string;
+    pilot: string;
+    body: string;
+    armor: string;
+    sensor: string;
+}> {
+    if (!data.value || !data.value.vehicles) return [];
+
+    const vehicleData = data.value.vehicles;
+
+    return vehicleData.map((vehicle: any) => ({
+        name: vehicle.name || 'Unknown',
+        handling: vehicle.handling || '0',
+        accel: vehicle.accel || '0/0',
+        speed: vehicle.speed || '0',
+        pilot: vehicle.pilot || '0',
+        body: vehicle.body || '0',
+        armor: vehicle.armor || '0',
+        sensor: vehicle.sensor || '0'
+    }));
+}
+
+export { data, getTotalValueByName, getSkills, getSpells, getSpirits, getVehicles };

@@ -20,11 +20,11 @@ onMounted(() => {
 
       <nav class="navbar">
         <ul>
-          <li><RouterLink to="vehicles" class="nav-link"><i class='bx bxs-invader'></i></RouterLink></li>
-          <li><RouterLink to="weapons" class="nav-link"><i class='bx bxs-backpack'></i></RouterLink></li>
-          <li><RouterLink to="main" class="nav-link"><i class='bx bx-street-view'></i></RouterLink></li>
-          <li><RouterLink to="skills" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
-          <li><RouterLink to="magic" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
+          <li><RouterLink to="Fahrzeuge" class="nav-link"><i class='bx bxs-invader'></i></RouterLink></li>
+          <li><RouterLink to="Waffen" class="nav-link"><i class='bx bxs-backpack'></i></RouterLink></li>
+          <li><RouterLink to="Hub" class="nav-link"><i class='bx bx-street-view'></i></RouterLink></li>
+          <li><RouterLink to="Fertigkeiten" class="nav-link"><i class='bx bxs-joystick'></i></RouterLink></li>
+          <li><RouterLink to="Magie" class="nav-link"><i class='bx bxs-magic-wand'></i></RouterLink></li>
         </ul>
       </nav>
 

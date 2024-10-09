@@ -6,11 +6,11 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const navigateLeft = () => {
-  router.push({ name: 'main' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+  router.push({ name: 'Hub' });
 };
 
 const navigateRight = () => {
-  router.push({ name: 'vehicles' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+  router.push({ name: 'Fahrzeuge' });
 };
 
 </script>
