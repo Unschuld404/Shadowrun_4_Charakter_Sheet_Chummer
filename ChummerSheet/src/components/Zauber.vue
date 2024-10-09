@@ -66,8 +66,7 @@ const spellcastingTotal = computed(() => {
     text-align: center;
     margin-top: 1vh;
     line-height: 2vh;
-    height:4vh;
-    border-bottom: 1px solid var(--font-color);
+    height: 5vh;
     position: relative;
   }
 
@@ -89,7 +88,7 @@ const spellcastingTotal = computed(() => {
   button {
     position: absolute;
     right: 0;
-    bottom: 1vh;
+    bottom: 2vh;
   }
 
 </style>/

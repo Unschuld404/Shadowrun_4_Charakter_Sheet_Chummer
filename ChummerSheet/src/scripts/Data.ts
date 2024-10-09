@@ -96,4 +96,41 @@ function getVehicles(): Array<{
     }));
 }
 
-export { data, getTotalValueByName, getSkills, getSpells, getSpirits, getVehicles };
+// Funktion, um alle Waffen zurückzugeben
+function getWeapons(): Array<{
+    name: string;
+    damage: string;
+    ap: string;
+    mode: string;
+    rc: string;
+    ammo: string;
+    ranges: {
+        short: string;
+        medium: string;
+        long: string;
+        extreme: string;
+    };
+    dicepool: string;
+}> {
+    if (!data.value || !data.value.weapons) return [];
+
+    const weaponData = data.value.weapons;
+
+    return weaponData.map((weapon: any) => ({
+        name: weapon.name || 'Unknown',
+        damage: weapon.damage || '0',
+        ap: weapon.ap || '0',
+        mode: weapon.mode || '',
+        rc: weapon.rc || '0',
+        ammo: weapon.ammo || '0',
+        ranges: {
+            short: weapon.ranges?.short || '0',
+            medium: weapon.ranges?.medium || '0',
+            long: weapon.ranges?.long || '0',
+            extreme: weapon.ranges?.extreme || '0'
+        },
+        dicepool: weapon.dicepool || '0'
+    }));
+}
+
+export { data, getTotalValueByName, getSkills, getSpells, getSpirits, getVehicles, getWeapons };

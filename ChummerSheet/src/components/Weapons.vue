@@ -1,42 +1,58 @@
 <script setup lang="ts">
 
+import { computed } from 'vue';
+import { data, getWeapons } from '@/scripts/Data';
+
+// Computed Property, das sich automatisch aktualisiert, wenn data sich ändert
+const weapons = computed(() => {
+  return data.value ? getWeapons() : [];
+});
+
 </script>
 
 <template>
 
-  <div class="box">
-    <div class="name">Beispielwaffe</div>
-    <div class="info">
-      <input type="checkbox" class="favourite">
-      <div class="value">Reichweite</div>
-      <div class="value">Schaden</div>
-      <div class="value">PB</div>
-      <button class="total-value">00</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <div class="name">Beispielschusswaffe</div>
-    <div class="info">
-      <input type="checkbox" class="favourite">
-      <div class="value">Schaden</div>
-      <div class="value">PB</div>
-      <div class="value">Modus</div>
-      <div class="value">Rückstoß</div>
-      <div class="value">Munition</div>
-      <button class="total-value">00</button>
-    </div>
+  <div class="scroll-box">
+    <ul>
+      <li v-for="weapon in weapons" :key="weapon.name">
+        <div class="item">
+          <div class="weapon-header">
+            <div v-if="data" class="name">{{ weapon.name }}</div>
+          </div>
+          <div class="info">
+            <input type="checkbox" class="favourite">
+            <div v-if="data" class="value">Schaden: <strong>{{ weapon.damage }}</strong></div>
+            <div v-if="data" class="value">PB: <strong>{{ weapon.ap }}</strong></div>
+            <div v-if="data" class="value">Modus: <strong>{{ weapon.mode }}</strong></div>
+            <div v-if="data" class="value">Rückstoßkomp.: <strong>{{ weapon.rc }}</strong></div>
+            <div v-if="data" class="value">Munition: <strong>{{ weapon.ammo }}</strong></div>
+            <button v-if="data" class="total-value">{{ weapon.dicepool }}</button>
+          </div>
+          <div class="info">
+            <div v-if="data" class="ranges">
+              <div class="range">Reichweite:</div>
+              <div class="range">Kurz: <strong>{{ weapon.ranges.short }}</strong></div>
+              <div class="range">Mittel: <strong>{{ weapon.ranges.medium }}</strong></div>
+              <div class="range">Lang: <strong>{{ weapon.ranges.long }}</strong></div>
+              <div class="range">Extrem: <strong>{{ weapon.ranges.extreme }}</strong></div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 
 </template>
 
 <style scoped>
 
-.box {
-  height: 15vh;
-  padding-top: 2vh;
-  padding-left: 4vh;
-  padding-right: 4vh;
+.scroll-box {
+  height: 80vh;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
 }
 
 .name {
@@ -44,25 +60,47 @@
   font-size: 3vh;
   font-weight: bold;
   color: var(--accent-color);
-  border-bottom: 1px solid var(--font-color);
+  margin-bottom: 1vh;
 }
 
 .info {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   text-align: center;
-  margin-top: 3vh;
-  height:8vh;
-}
-
-.total-value {
-  height: 6vh;
-  width: 6vh;
-  margin-top: -2vh;
+  margin-top: 1vh;
+  line-height: 2vh;
+  height:5vh;
+  position: relative;
 }
 
 .value {
-  width: 10%;
+  width: 18%;
+  text-align: center;
+  line-height: 2vh;
+}
+
+.ranges {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.range {
+  width: 18%;
+  text-align: center;
+  line-height: 2vh;
+}
+
+button {
+  position: absolute;
+  right: 0;
+  bottom: 1vh;
+}
+
+.favourite {
+  position: absolute;
+  left: 0;
+  bottom: 1vh;
 }
 
 </style>/
