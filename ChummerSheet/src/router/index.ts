@@ -29,8 +29,8 @@ const router = createRouter({
       component: WeaponView
     },
     {
-      path: '/spells',
-      name: 'spells',
+      path: '/magic',
+      name: 'magic',
       component: SpellView
     },
     {

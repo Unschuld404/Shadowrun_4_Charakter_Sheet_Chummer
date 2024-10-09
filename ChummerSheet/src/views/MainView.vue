@@ -8,37 +8,55 @@ import PhysicalMonitor from "@/components/PhysicalMonitor.vue";
 import Resistance from "@/components/Resistance.vue";
 import StunMonitor from "@/components/StunMonitor.vue";
 import Specials from "@/components/Specials.vue";
+
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const navigateLeft = () => {
+  router.push({ name: 'skills' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+};
+
+const navigateRight = () => {
+  router.push({ name: 'weapons' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+};
+
 </script>
 
 <template>
 
-  <div class="collection">
+  <div v-touch:swipe.left="navigateLeft"
+       v-touch:swipe.right="navigateRight">
 
-    <div class="column">
+    <div class="collection">
 
-      <div class="row">
-        <Nuyen/>
-        <Edge/>
-        <Initiative/>
+      <div class="column">
+
+        <div class="row">
+          <Nuyen/>
+          <Edge/>
+          <Initiative/>
+        </div>
+
+        <Resistance/>
+
+        <Specials/>
+
+        <div class="row">
+          <PhysicalMonitor/>
+          <StunMonitor/>
+        </div>
+
       </div>
 
-      <Resistance/>
-
-      <Specials/>
-
-      <div class="row">
-        <PhysicalMonitor/>
-        <StunMonitor/>
+      <div class="column">
+        <MainSkills/>
       </div>
 
-    </div>
+      <div class="column">
+        <MainActions/>
+      </div>
 
-    <div class="column">
-      <MainSkills/>
-    </div>
-
-    <div class="column">
-      <MainActions/>
     </div>
 
   </div>
