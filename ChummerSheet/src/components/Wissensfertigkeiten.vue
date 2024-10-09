@@ -22,7 +22,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
             <div class="checkbox-box">
               <input type="checkbox" class="favourite">
             </div>
-            <div class="name" v-if="data">{{ skill.name }}</div>
+            <div v-if="data">{{ skill.name }}</div>
             <div class="value" v-if="data"><strong>{{ skill.rating }}</strong> + {{ skill.attribute }} {{ skill.attributemod }}</div>
             <div class="button-box">
               <button v-if="data" class="total-value" @click="openModal">{{ skill.total }}</button>
@@ -45,7 +45,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
             <i class='bx bx-chevron-down mod' ></i>
           </div>
         </div>
-        <button class="confirm" @click="closeModal"><i class='bx bxs-chevron-down'></i></button>
+        <button class="confirm" @click="closeModal">OK</button>
       </div>
     </div>
   </div>
@@ -53,15 +53,5 @@ const { showModal, openModal, closeModal } = useRollDialogue();
 </template>
 
 <style scoped>
-
-.item {
-  justify-content: space-between;
-}
-
-.name {
-  width: 50%;
-  font-weight: bold;
-  color: var(--accent-color);
-}
 
 </style>

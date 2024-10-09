@@ -9,47 +9,47 @@
     <div class="scroll-box">
 
       <div class="item">
-        <div class="name">Lieblingsfähigkeit</div>
+       <div>Lieblingsfähigkeit</div>
         <div class="formula">(F/2)+1</div>
       </div>
 
       <div class="item">
-        <div class="name">Manablitz</div>
+       <div>Manablitz</div>
         <div class="formula">(F/2) - 1</div>
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfähigkeit</div>
+       <div>Lieblingsfähigkeit</div>
         <div class="formula">(F/2)+1</div>
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfähigkeit</div>
+       <div>Lieblingsfähigkeit</div>
         <div class="formula">(F/2)+1</div>
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfähigkeit</div>
+       <div>Lieblingsfähigkeit</div>
         <div class="formula">(F/2)+1</div>
       </div>
 
       <div class="item">
-        <div class="name">Manablitz</div>
+       <div>Manablitz</div>
         <div class="formula">(F/2) - 1</div>
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfähigkeit</div>
+       <div>Lieblingsfähigkeit</div>
         <div class="formula">(F/2)+1</div>
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfähigkeit</div>
+       <div>Lieblingsfähigkeit</div>
         <div class="formula">(F/2)+1</div>
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfähigkeit</div>
+       <div>Lieblingsfähigkeit</div>
         <div class="formula">(F/2)+1</div>
       </div>
 
@@ -65,14 +65,6 @@
 
   .box {
     height: 100%
-  }
-
-  .name {
-    width: 80%;
-  }
-
-  .formula {
-    width: 20%;
   }
 
 </style>

@@ -21,9 +21,9 @@ const spellcastingTotal = computed(() => {
   <div class="scroll-box">
     <ul>
       <li v-for="(spell, index) in spells" :key="index">
-       <div class="item">
-         <div class="spell-header">
-           <div v-if="data" class="name">{{ spell.name }}</div>
+       <div class="item column">
+         <div class="header">
+           <div v-if="data">{{ spell.name }}</div>
          </div>
          <div class="info">
            <input type="checkbox" class="favourite">
@@ -42,23 +42,6 @@ const spellcastingTotal = computed(() => {
 </template>
 
 <style scoped>
-
-  .item {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .spell-header {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .name {
-    height: 5vh;
-    font-size: 3vh;
-    font-weight: bold;
-    color: var(--accent-color);
-  }
 
   .info {
     display: flex;
@@ -80,7 +63,6 @@ const spellcastingTotal = computed(() => {
   }
 
   .formula{
-    width: 20%;
     padding-right: 8vh;
     text-align: right;
   }

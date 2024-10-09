@@ -13,7 +13,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
     <div class="scroll-box">
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value" @click="openModal">00</button>
@@ -21,7 +21,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value">00</button>
@@ -29,7 +29,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value">00</button>
@@ -37,7 +37,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value" @click="openModal">00</button>
@@ -45,7 +45,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value">00</button>
@@ -53,7 +53,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value">00</button>
@@ -61,7 +61,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value" @click="openModal">00</button>
@@ -69,7 +69,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value">00</button>
@@ -77,7 +77,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value">00</button>
@@ -85,7 +85,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value" @click="openModal">00</button>
@@ -93,7 +93,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value">00</button>
@@ -101,7 +101,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value">00</button>
@@ -109,7 +109,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value" @click="openModal">00</button>
@@ -117,7 +117,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
       </div>
 
       <div class="item">
-        <div class="name">Lieblingsfertigkeit</div>
+       <div>Lieblingsfertigkeit</div>
         <div class="value">Wert + Attr.</div>
         <div class="button-box">
           <button class="total-value">00</button>
@@ -141,7 +141,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
           <i class='bx bx-chevron-down mod' ></i>
         </div>
       </div>
-      <button class="confirm" @click="closeModal"><i class='bx bxs-chevron-down'></i></button>
+      <button class="confirm" @click="closeModal">OK</button>
     </div>
   </div>
 
@@ -151,10 +151,6 @@ const { showModal, openModal, closeModal } = useRollDialogue();
 
   .box {
     height: 100%;
-  }
-
-  .name {
-    width: 60%;
   }
 
   .value {

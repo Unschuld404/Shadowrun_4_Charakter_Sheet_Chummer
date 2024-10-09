@@ -43,6 +43,7 @@
 
 .item {
     display: flex;
+    justify-content: space-between;
     margin-left: 2vh;
     margin-right: 2vh;
     border-bottom: 1px solid var(--background-color);

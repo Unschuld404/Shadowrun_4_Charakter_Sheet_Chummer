@@ -13,7 +13,7 @@ const vehicles = computed(() => {
   <ul>
     <li v-for="vehicle in vehicles" :key="vehicle.name">
       <div class="box">
-        <div vlif-data class="name">{{ vehicle.name }}</div>
+        <div v-if="data" class="header">{{ vehicle.name }}</div>
         <div class="info">
           <div v-if="data" class="value">Handling: <strong>{{ vehicle.handling }}</strong></div>
           <div v-if="data" class="value">Beschl.: <strong>{{ vehicle.accel }}</strong></div>
@@ -39,14 +39,6 @@ const vehicles = computed(() => {
     margin-bottom: 2vh;
   }
 
-  .name {
-    height: 5vh;
-    font-size: 3vh;
-    font-weight: bold;
-    color: var(--accent-color);
-    border-bottom: 1px solid var(--font-color);
-  }
-
   .info {
     display: flex;
     justify-content: space-between;
@@ -55,7 +47,7 @@ const vehicles = computed(() => {
   .value {
     width: 15%;
     text-align: center;
-    line-height: 9vh;
+    line-height: 6vh;
     font-size: 2vh;
   }
 

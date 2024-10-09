@@ -15,9 +15,9 @@ const weapons = computed(() => {
   <div class="scroll-box">
     <ul>
       <li v-for="weapon in weapons" :key="weapon.name">
-        <div class="item">
-          <div class="weapon-header">
-            <div v-if="data" class="name">{{ weapon.name }}</div>
+        <div class="item column">
+          <div class="header">
+            <div v-if="data">{{ weapon.name }}</div>
           </div>
           <div class="info">
             <input type="checkbox" class="favourite">
@@ -48,19 +48,6 @@ const weapons = computed(() => {
 
 .scroll-box {
   height: 80vh;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-}
-
-.name {
-  height: 5vh;
-  font-size: 3vh;
-  font-weight: bold;
-  color: var(--accent-color);
-  margin-bottom: 1vh;
 }
 
 .info {

@@ -12,9 +12,9 @@ onMounted(() => {
 
 <template>
    
-    <header class="header">
+    <header class="main-header">
 
-      <div class="name">
+      <div class="chummer-name">
         <div v-if="data">{{ data.name }}</div>
       </div>
 
@@ -38,7 +38,7 @@ onMounted(() => {
 
 <style scoped>
 
-.header {
+.main-header {
   background-color: var(--background-color);
         display: flex;
         justify-content: space-between;
@@ -46,11 +46,11 @@ onMounted(() => {
         font-size: 4vh;
       }
 
-.name {
-      font-weight: bold;
-      display: flex;
-      width: 30%;
-      }
+.chummer-name {
+  font-weight: bold;
+  display: flex;
+  width: 30%;
+}
 
 .karma {
   width: 30%;
