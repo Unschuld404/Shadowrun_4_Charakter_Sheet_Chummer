@@ -28,7 +28,7 @@ onMounted(() => {
         </ul>
       </nav>
 
-      <div class="karma">4 Karma</div>
+      <div v-if="data" class="karma">{{ data.totalkarma }} Karma</div>
 
     </header>
 

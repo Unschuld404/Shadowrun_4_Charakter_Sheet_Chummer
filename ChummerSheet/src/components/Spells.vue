@@ -10,9 +10,9 @@ const spells = computed(() => {
 const spellcastingTotal = computed(() => {
   if (data.value && data.value.skills) {
     const skill = data.value.skills.find((skill: any) => skill.name === 'Spruchzauberei');
-    return skill ? skill.total : 'N/A';
+    return skill ? skill.total : '?';
   }
-  return 'N/A';
+  return '?';
 });
 </script>
 
@@ -23,16 +23,16 @@ const spellcastingTotal = computed(() => {
       <li v-for="(spell, index) in spells" :key="index">
         <div class="box">
           <div class="spell-header">
-            <div class="name">{{ spell.name }}</div>
-            <button class="total-value">{{ spellcastingTotal }}</button>
+            <div v-if="data" class="name">{{ spell.name }}</div>
+            <button v-if="data" class="total-value">{{ spellcastingTotal }}</button>
           </div>
           <div class="info">
             <input type="checkbox" class="favourite">
-            <div class="category">{{ spell.category }}</div>
-            <div class="value">{{ spell.type }}</div>
-            <div class="value">{{ spell.range }}</div>
-            <div class="value">{{ spell.duration }}</div>
-            <div class="formula">{{ spell.dv }}</div>
+            <div v-if="data" class="category">{{ spell.category }}</div>
+            <div v-if="data" class="value">{{ spell.type }}</div>
+            <div v-if="data" class="value">{{ spell.range }}</div>
+            <div v-if="data" class="value">{{ spell.duration }}</div>
+            <div v-if="data" class="formula">{{ spell.dv }}</div>
           </div>
         </div>
       </li>

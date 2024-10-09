@@ -22,17 +22,17 @@ const { showModal, openModal, closeModal } = useRollDialogue();
             <div class="checkbox-box">
               <input type="checkbox" class="favourite">
             </div>
-            <div class="name">{{ skill.name }}</div>
-            <div class="value"><strong>{{ skill.rating }}</strong> + {{ skill.attribute }} {{ skill.attributemod }}</div>
+            <div class="name" v-if="data">{{ skill.name }}</div>
+            <div class="value" v-if="data"><strong>{{ skill.rating }}</strong> + {{ skill.attribute }} {{ skill.attributemod }}</div>
             <div class="button-box">
-              <button class="total-value" @click="openModal">{{ skill.total }}</button>
+              <button v-if="data" class="total-value" @click="openModal">{{ skill.total }}</button>
             </div>
           </li>
         </ul>
       </div>
       <p v-else>No knowledge skills available.</p>
     </div>
-    <div class="lower-header">Aktionsfertigkeiten</div>
+    <div class="lower-header">Wissensfertigkeiten</div>
 
     <!-- Dialogue for Dice Rolls -->
     <div v-if="showModal" class="modal-overlay">
