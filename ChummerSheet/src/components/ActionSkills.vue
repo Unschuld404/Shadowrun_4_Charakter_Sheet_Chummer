@@ -15,7 +15,7 @@ const { showModal, openModal, closeModal } = useRollDialogue();
 <template>
 
   <div class="action-skills box">
-    <div class="scroll-box">
+    <div v-if="data" class="scroll-box">
       <div v-if="actionSkills.length">
         <ul>
           <li v-for="(skill, index) in actionSkills" :key="index" class="item">

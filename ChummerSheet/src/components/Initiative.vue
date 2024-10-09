@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { data } from '@/scripts/Data';
+import { data, getTotalValueByName } from '@/scripts/Data';
 
 </script>
 
@@ -8,7 +8,7 @@ import { data } from '@/scripts/Data';
 
   <div class="box">
 
-    <div class="initiatives">
+    <div v-if="data" class="initiatives">
 
       <div class="initiative">
         <div class="initiative-category">Normal</div>
@@ -20,9 +20,9 @@ import { data } from '@/scripts/Data';
         <button class="total-value" v-if="data">{{ data.matrixinit.base }}</button>
       </div>
 
-      <div class="initiative">
+      <div v-if="data" class="initiative">
         <div class="initiative-category">Astral</div>
-        <button class="total-value" v-if="data">{{ data.astralinit.base }}</button>
+        <button class="total-value" v-if="data">{{ getTotalValueByName('INT')*2 }}</button>
       </div>
 
     </div>
