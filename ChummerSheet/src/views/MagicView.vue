@@ -7,7 +7,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const navigateRight = () => {
-  router.push({ name: 'skills' }); // Ersetze 'ZielRouteName' mit dem Namen der Route, zu der du navigieren möchtest
+  router.push({ name: 'skills' });
 };
 
 </script>

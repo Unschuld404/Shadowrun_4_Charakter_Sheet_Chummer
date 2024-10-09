@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Edge from "@/components/Edge.vue";
 import Initiative from "@/components/Initiative.vue";
-import MainActions from "@/components/MainActions.vue";
-import MainSkills from "@/components/MainSkills.vue";
+import MainActions from "@/components/FavouriteActions.vue";
+import MainSkills from "@/components/FavouriteSkills.vue";
 import Nuyen from "@/components/Nuyen.vue";
 import PhysicalMonitor from "@/components/PhysicalMonitor.vue";
 import Resistance from "@/components/Resistance.vue";
