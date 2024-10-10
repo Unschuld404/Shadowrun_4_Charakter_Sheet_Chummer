@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import Waffen from "@/views/Waffen.vue";
 
 import { useRouter } from "vue-router";
-import Weapons from "@/components/Weapons.vue";
+import Weapons from "@/components/WaffenListe.vue";
 
 const router = useRouter();
 

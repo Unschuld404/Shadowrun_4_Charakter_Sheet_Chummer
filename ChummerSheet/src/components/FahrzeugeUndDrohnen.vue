@@ -51,9 +51,4 @@ const vehicles = computed(() => {
     font-size: 2vh;
   }
 
-  strong{
-    font-size: 2.5vh;
-    color: var(--accent-color);
-  }
-
 </style>/
